@@ -1,14 +1,102 @@
-�Yr��*LbT��k}�2��E�7Clc~���
-1^�'E��XCГnAlN`D�zE�,F-�\�ꆑ��45�y\�MbsrX��IsR+ki���r2�vd�����%P�L$K'3_��n��6jf�	0�C�g��F�z���6����L�U��jaUTap�
-!%�R�l�h�E��7���|Df2R�?.C��/��i���D�s3�NJ�K��KS޺ڭ�,�T��Z"�=�Ӎn߮,iK����&�hy�t��HG��dL\�1/aR��)�(���$��Z�;�*Ӌstً�zRF������%60��췏՟.|0-��E_����ztˋTaX��`>=qf�0��`��C�=wWb �RrӷS��y���9���$����WPi����N�Y��c�2#r��v��gk���)T���}D~Iw���F*C�M���,g��n6��ޖ�y�C�ˉ��M�D��m��<5+����vYyf�/5g���UQ�C� _ϤD|W���p�%��[�V�0% ����������<���'{��;ҎI��!�9���C��<��6�v[8�BMmnu�sM�F�]�0�����@�W�4��>��~���"n����ȒH(F����x����9�	)6.�!ZACp��?��X?�ὝgL#= �n��0:34Y� <~\b�@�R���d��C</�k�s��
-*,�ZLfVg�L�NQK�\�ۏ�*����i˩�����#����Z>��vA���b�*D�%Պ���џ�h�M�ń�eF+ם����K�_4��XUy�A�����}��=�2��9^�G��P�y�d�A
-���(���b����+�����z@��j��*E
-���0|��('�����)CS�Q�) bi��5%we�K�;���M��@���ť�3}^������'�h7E��~U��Z���I˦ZR
-oh�<��(��\�#�Mn�����}-a��"�fI�:�]��	�ŽALL,ZO���� e�XʸzZ\�_6�j+�x�lmT�E��r�Ԉu􉑢���0RHj`�?y���,�JK�#���?�Nڟ�8B�������N�ߞ�������e!�pts�$J�R7�l?�X����I�Kw�P|v�(e)��F�#Ig4.meWx::v�H!��=����F�X�ٯ��ܤ9�(F�\�3�Ov|\��B�4����5�x9�
-J����[�ҿڴ�*��^�S#;[F��i����*q�������T����F��twl3�0@�%��4h%f��=i-�Q;Hei:?e�F�B g��R�����/D�Qp�#oL6
-ظ��k3�B��4��X7A�k��3�M6&��2���Z�\}���o���Y�2������\���B����
-�rZR�sq�L~[���t��=e������G�nǢ=��5RdX���]�y�|�Ĝ�Z;o�n�#r�܀&�Qp?��� &�a��rJ�/�cK_���O><+pe�<b6�����$����3(|�S�Y _�.M^%��4��EM�=Y9�Ow�����+�J��(RI�!��ۘ�g���#��$�����;t0��S��erp}�P��Ȏ�,*&{�׺q��D�ϻ��30�tjw�����k����6�j G9�}[u���V4j2�%�Y�+in�i۝ղO�'0���*�ݒ�9�L�.����(a���#��+[�>k��9�
-���)�ь/�Ɋ�g�6!�Q�1�Q�K]� ��1�V�?�ˠf�r/r�����s�v�聵����V���W��F�A�0�Ƿ���5�Us?��A|
-�+����1mk��Ӳ�a��jS��g$�BU�Pt�C�h�Dbo���Añ@"e�qB����%'�7��On�{w���n���=8�gĜ�Zܖv���͸�]ֺ������ZB2A��ojXI�E��#�y�<̫k��Hȷ��υ%��
-ZG�A5P��t�'�[L���"���V�4�Z���_�7�tƔ3O��v�&�!��LB�i�:���^҈ڮ��u`��؉�$�]C����E)��dDB�H*dvwd1��G��(R�u��2>ֶ"k�)�A)�/��l�
-g,�s�;�eOQ�(i2ѯe���&)�dWG`��pw3�R�����jp@]K ½�-�hE�e�Y�;�c �ej@L8Z�iYR%��̕�h�t�fmE+��z�6���D,{��h})C���l�����{,�/{/�)"_��/�rb�ڛ�7~�T^�W�8�2��lfs*�	���h�C��^�jLy����ܳt�0��9��W��W<��ޅMx|V�Lw�z�R��]�O��G͉�D�:�>O�������?�4��a����As��T4)I�qА�����0-�<��9�TQ�@�3!�N_i��u��!#**����;�lq����hk�.��&K���/),����h��=3?/�sƯj=P�kHB*�ܡ�5�?]�fU�*m\�N��i��S�<�̓�ǿ�w�������=6�JU��63�D�b����o�����R�R
+import * as React from "react"
+import { cn } from "cn"
+
+function Card({
+  className,
+  size = "default",
+  ...props
+}: React.ComponentProps<"div"> & { size?: "default" | "sm" }) {
+  return (
+    <div
+      data-slot="card"
+      data-size={size}
+      className={cn(
+        "group/card flex flex-col gap-(--card-spacing) overflow-hidden rounded-xl bg-card py-(--card-spacing) text-sm text-card-foreground ring-1 ring-foreground/10 [--card-spacing:--spacing(4)] has-data-[slot=card-footer]:pb-0 has-[>img:first-child]:pt-0 data-[size=sm]:[--card-spacing:--spacing(3)] data-[size=sm]:has-data-[slot=card-footer]:pb-0 *:[img:first-child]:rounded-t-xl *:[img:last-child]:rounded-b-xl",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function CardHeader({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-header"
+      className={cn(
+        "group/card-header @container/card-header grid auto-rows-min items-start gap-1 rounded-t-xl px-(--card-spacing) has-data-[slot=card-action]:grid-cols-[1fr_auto] has-data-[slot=card-description]:grid-rows-[auto_auto] [.border-b]:pb-(--card-spacing)",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function CardTitle({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-title"
+      className={cn(
+        "font-heading text-base leading-snug font-medium group-data-[size=sm]/card:text-sm",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function CardDescription({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-description"
+      className={cn("text-sm text-muted-foreground", className)}
+      {...props}
+    />
+  )
+}
+
+function CardAction({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-action"
+      className={cn(
+        "col-start-2 row-span-2 row-start-1 self-start justify-self-end",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+function CardContent({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-content"
+      className={cn("px-(--card-spacing)", className)}
+      {...props}
+    />
+  )
+}
+
+function CardFooter({ className, ...props }: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="card-footer"
+      className={cn(
+        "flex items-center rounded-b-xl border-t bg-muted/50 p-(--card-spacing)",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export {
+  Card,
+  CardHeader,
+  CardFooter,
+  CardTitle,
+  CardAction,
+  CardDescription,
+  CardContent,
+}

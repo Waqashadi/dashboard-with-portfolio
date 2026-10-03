@@ -7,8 +7,11 @@ import {
   getLanguages,
   syncRepositoryData,
 } from "../controllers/repository.controller.js";
+import { loginUser } from "../controllers/user.auth.controller.js";
 
 const router = express.Router();
+
+router.get("/auth/login", loginUser);
 
 // Get all repositories
 router.get("/", getAllRepositories);

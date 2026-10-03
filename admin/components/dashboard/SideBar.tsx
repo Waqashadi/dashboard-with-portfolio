@@ -1,38 +1,243 @@
-	�F����c��gI$�VTkc�����T<w(U��y(�a=7s�<�g�0G�l�]��p�y �ٱ�4��ɤ�r+T�u�NDwL}-�NN�Ie%<Qoc�r�"聩s���mQ,����ڜ�M�`ae��.äV�3´��%>-����/���풫�>;���F�E?��
-��Mp	q�R��#���
-��=��מ�%�.�Ob>+�H�J�?(�@b���Dh.bѐ�,*���Ђ��E���D)
-E�Oz�܂�枿[G�3�2nu�I�C�� �K��>�(��IB�g�ʼ+f	��ڪ%}#[��Ƕ�+V�6�A�C�4��piWm���!ѳ�EJ�i$�m�.����zh拹�tj?BU��ʐ7?�s�y���5����;X[����O�+���s`�G���p
-�*��Fw�+���v�DOQ�������ލ����4w�^!�������ͦG�&�:������0��a���s�}��Q���K?
-��Բ��)���<AJDM�*�[w��ꋘ��Yl�<��=G'�;���_N��ަ��������"�\�&�ƿ8�8���9��2~̿��L�i�^��:Z��>�Dd��Hg#Ϣr�I���Գ���լU�����oz������Y��}&f\
-��[y1�kx2o��2?2�ﱌ��
-�Q�7�w���{~��|T��c�}��"�&�����?I�?��}���b		$غ<�r�"S@(2@F�AJ�y�c��k"v4���(�����=;���M�'�����v8�uܪ5�`��[���v'_�D0tw�1d����p9���\�2s��iZ@��;u���d��m8x:zn��2_�����[���M"��;_9���?�p�.B�$('M[�C�k?ݞ��|3|C�2�E�ď�=�3J_?��M(S�˘̺�[sP�b��D�zTƮ�U�Qv9T<<�g��h�XW0�ʛ�ڀ�����U;���kqO]���	r��A�t&,��A8��eI#@�oQ�F�5+�WR�$�
-y${��	S>��1��?�$���7P�����.{��d��P{vy2	� I�Eow_Jf����(��X%�d��%��6�!a��[#k&9�%��4s�>
-:�^�a�Y_e㰼*��Ћ���Y�_g��|XR�Wt�17�f���*���Ι3K糱�MOf[�E����U���G5�3����Z�좗
-1������fL	�����w���9Fz�����ᮜ+���7�=A�{��~���G@�Ѥ�� ���?j�58Si��2�P�@ʫ��������d��~�1�c��4ϸ0�A)s�)���W1���y&z�y��;X�Bڔ��"F���̨�t/
-��.K2�� �ħ;^��1�{�2g�_p5O�x�:���N5SƗ<��U(P�}��L�D�adL7���m?p�VpӤXHrq8濅-E���בʳ da�o�b퉱2#�B����,
-=�}�{�x��#Ď'P-�����ISǛ����O�qua��]��_A�v]�����������:�i��)�8s]�U������$Hx'�Smd�P+@�nf�]ğW��@��'bV�g�|,߻��ܧ���k͒���::x�A��Flyl��H�������	@��^��sO��ml#�sr�ȾtNT��:��7pR}����(}:�`�h�����|�C�!���Y�b�~@ْ�j�aF�
-�7��!�q�/ܭ�0ܳM�2qU��ZM$	k&�}60MB����a��q�B^����x��)ȃ)"�0��C-�t�M�Y�%J��p)��:N�]f;@���rKu*�F�(�('V~��o��)3�\�Ok����Eg�%<
-�;(����Ut ���C�s_~M�$�~s��d��-�}�4�r�6:����?�6��}=g��6���%,5/["f�l�UP����՝Hb����D�\5D=�����{#"���q�%���X�z?BL����������+`�8<P���C��+*6�����w��O�h�]ܪEE��-&�y�}�@`6l�?G�@|���^��X]Za޽ f�sC=�)<נ���
-d�I����7yْ`��<21𐸃�Z���?r�:�Z��;F�*Nԧ$�b�p>&E���'�E��.�l�p4AV�����v7�s)����`��8�����/0;}F��D��)�l���0b��Z��?���0�
-��Eܭ8n��������CO*��떑[]�>�t�O��`aͮg�0�p�������$��ږwY��~�A�
-xx4��u.���`�B�N!M��P�pK��D��1P���o����Z%����}K���B?L���/�K�_D�غ������?o0b�ׯ0�y�E�C�G�;7�W�Ừ�-OZm��O�&}�|�"y�!Q��˚��x��s�|˓a�[BK��g�.�*�5�A���HaIew��ǫ8N��7a;���&���<E��P�<o�㢒j����j)�D�!��>�$ݹ����� �3~�6�W���F[��1Z��u�Jm^����}-ñv�ज़���r�3�H���y �	�#�
-ؖ���q�x��
-�yh�����qjH������n%�8��s��
-���:��O8i�u�'�q���:>-BU��VR�/vJb��3ú�$���[�!
-��'#ҽ�|2���:Y��̧�l���b�j���W0������~���w�>M� ��m�n�Q�9���qYt�癆���@��=��?w+��!W�h',�|�v��p�p�s�,jd$}�\���9�y��1*�`�9�"�ּA���:��4��@�M�㦴��e��[nn�Wn0�&�@I��/"�q�!���K��k֠�{p�X�ӡ��r㈲y��A!��i軍���J�7*��!z<��a��}c�@��+Xv^�yZ: N�G�o�P_�%MBP.�LRR��ј=���;����*�uE�]��'�t<b��)帶��=�P��z���������®�/�2��q�$��Y����t��LÚ��O�D���?6>!ɂ�5���7K����M\X���EhI.ȿ�^�,އ�ے�"CXi��=pQ[���-v���	Y*?Ĵt(��^�0�{3��41��`=?E��3��&��5Ħơ�I��X.j�.�i�2���x�3W�aL!2�����)W�.����MS�z���c���h��I��
-Nb��ff����w�Y�b挥�/o���2�K��J�2�z]���1��(�Μ���ry_a����V1e(g�ي����W4��L�@6�ܦdQo�/S�OgvѮ�.��b@�p���U8#�<��~�(e���`{5,'��JΪKL���iG����)����V�ݐ-�IH�vl�E�N�@M�t����O�J�:t�1�^�D�hW��:�&��"��ߌ��ec]~,�d?�	|���=Q�o�Fgu�3�v�-�f��;��!��Hz��|A����2T4�ٴ������O��FSL������a��\q�_��ʥEˈT�5NȨt��)�]����������gYk����Y�(7�%hh�^��5�E��,���Q�g5[��.*��?���j�WP{��Z�|�)���c#��e�����L����*b��y\=��/�F��kM����35�4����5q�mVTxd�k|�UMK|yi�p��O������m*q���5�!�J��}��.}��I8y�����BD��x�����HJjIm�X_�`����B�t-�P�����.�B�.�g`Z��#L���Y�c�����~�E}�r7�E��"`S��u	�'k�h\vzF�R���z�d~ۑ��Џ�
-#}!ܑ�i#y�@��6�eY�K{9�	������c�k7�t�=�\+�[�F����1�@�A��o���9���iA��������_�b���)ng�M�`���˂��@k7%�����
-�G�*͐��]��Z��>�`-^۴V�[�i� ��L[Mi}���Yx$I҇Mla~�:�$��`�0�i%�X:��2^+T�"0u��i������f���+�?U��ּK�& ��!b��כֿ`�3��~B:@$��qO�^�Gĝtr�����א�x��@��Hd,�sX��U��U4�?~o%q̳Q�J���T�P,ؖ�����$h���6�坭������_��҄&����G����kN�jB���IQ�~�w�׌�,w�'��k��=��=i�l�{3���~�ܔf5�2u�e��`ށ=�"�3�
-�b��)�3�4���;��S�?��������-����8�"�!�/�������4=3�#��lw��4R����6��E�5��p���)P���ߤ�C�y�o�z�_�1�����Ӳ`�j�({a���Z�Ma�'$�D�9�o5����� ��`������uTV�H�.md�8��71m��~R�q�ˡ�������ܥEx]>S�wl�Ȑ��D�j��G!�Xl��^j�����YYԹ�w�B,�=J[=���\D�m7:�)
-�m��z�T��U�O��mm'���C�Ց/ ��Y@�_[�m�2k>��S�8[�p�}�B�>��ȧ�������)Ĕ�k{%������C��2�:8Ԟ�`�!lE<��&����O�k�w�	��S�<ǻ
-"��8���*持Q�ھ죆��k�� q�b�0#��ԹM�S5�
-k���y�-)
-e?�*q3C�\�Kr$���}f�"1�[�]�����p$�'s{^Y�Pf�m6�e���1ٞ;0Ή�w蕷�'bG1(�y����X��F���(�J��@f��_P�]�h5�p��w���}#l�n��m�+�k�c:|��X�
-�E�2�	1OJ.N�d3 W�;�)�÷����+�"�xZ�R�v?��#T�����2l�9]�X_�7nI�!���s�+�Ҹb&=����o�(�}w���$��}�j쬛��P����dڪB�%pd�$J��G������I%mDU�q�&p�+$��f��<����trgX�^l�cUS�PŸ��z�J.�'m��I�wt�%yȘϐ)���x���E�qӲHC���Ro}�(ɴ�U|;b2zQ����;���ӭ��cr�=�.��4J��\N_�u�>�E��C�uw"�%���T��L��N=�e�����z^�s���7ϻ�ioX�����`f6��>��̞R�E�<���/w����4�Og��ח����)���(�i7;t9^�_���������W�Қ�Bg~�W�d��'�4X����JX\01���d2��*dբ����#�i-</�
-��2P2x��aY7f�G�*���fYy�FI4H����= 3�Z_$� ��B�c�r�u�4x|�v��ҭy8���ߙ/C{.�G�_����W�����x4e�_���\w���K/���⒪ajh]��c�̓>4֭�@�����͒�ή�ıa$�Mh��F�aN;5I�8(�U�$�In��h5N]�F��x�C��E<�G��B�o�ޟ/���ݱU��d�@`l�n��J/w�)�V"���̬a��vy��ϱ6DT��Lfq�
-!�E{��1ʊ�d=�P���^	Z0�{ �*�f�P�����8�-�>`�t��D���JG���}�e�־:Htk�e�x�߈9.��L��	K
-x��#�3�a��3T�#��,��r�Ѝ��O1����o4hC3��J����H�Y�F���ep|�I���T��Y$����آ���r����;]���Ry�˨ɩ���Ƭ�V�q�k�Ds!�~��Q�4o��S�q��S���@������&+�(���̃{"Ꞹ���w�}��91^+HV�{U{H8�I�+�I�����*�ɟ}�A�M
-�v��F�ؽ��±�ߵ��y��D]\cW����ǆ��di`]�f�r�棣n�f�����o\�bK�p�(�Ĭ�bG�9�i2��_
-V����a�jH��L�[w�'���/�Z��q/ɯD־�B�"�F�.���]	��A�WĬ��Q��WՓ���X�{�}��N�
-�'����wYD�`h踈Ž�����ԣ�X�dQ_�蚨��
-��7�G��6�:��n����Tw��5���S'��q��_�c������T/#l�@�EI]b7	��-g�6�<��;�L]4l~Xdߡ��%�0�ꉒY��T(:ɼ�`�]�<ßX�t�2$@��=�'��a�r�@;�T�s &��8��vb�խY
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+
+import {
+  LayoutDashboard,
+  Building2,
+  GraduationCap,
+  ClipboardList,
+  CheckSquare,
+  Plane,
+  ShoppingCart,
+  Wallet,
+  School,
+  ChevronsLeft,
+  ChevronsRight,
+  X,
+  type LucideIcon,
+} from "lucide-react";
+import { useSidebar } from "@/context/SidebarContext";
+
+
+const NAV_ITEMS: {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+}[] = [
+  {
+    href: "/",
+    label: "Dashboard",
+    icon: LayoutDashboard,
+  },
+  {
+    href: "/programs",
+    label: "Programs & Institutions",
+    icon: Building2,
+  },
+  {
+    href: "/students",
+    label: "Students",
+    icon: GraduationCap,
+  },
+  {
+    href: "/applications",
+    label: "Applications",
+    icon: ClipboardList,
+  },
+  {
+    href: "/tasks",
+    label: "Tasks",
+    icon: CheckSquare,
+  },
+  {
+    href: "/trainings",
+    label: "Destination Trainings",
+    icon: Plane,
+  },
+  {
+    href: "/tests",
+    label: "Buy Tests",
+    icon: ShoppingCart,
+  },
+  {
+    href: "/profile",
+    label: "Accounts",
+    icon: Wallet,
+  },
+];
+
+export function Sidebar() {
+  const [collapsed, setCollapsed] = useState(false);
+
+  const {
+    mobileOpen,
+    closeMobileSidebar,
+  } = useSidebar();
+
+  return (
+    <>
+      {/* Mobile Overlay */}
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/40 md:hidden"
+          onClick={closeMobileSidebar}
+          aria-hidden="true"
+        />
+      )}
+
+      {/* Sidebar */}
+      <aside
+        className={[
+          "fixed inset-y-0 left-0 z-50 flex h-screen",
+          "shrink-0 flex-col overflow-hidden",
+          "border-r border-border bg-sidebar p-4",
+          "transition-all duration-300",
+
+          // Mobile drawer
+          mobileOpen
+            ? "translate-x-0"
+            : "-translate-x-full",
+
+          // Desktop
+          "md:static md:translate-x-0",
+
+          // Desktop width
+          collapsed
+            ? "md:w-28"
+            : "md:w-64",
+
+          // Mobile width
+          "w-72",
+        ].join(" ")}
+      >
+        {/* Header */}
+        <div
+          className={[
+            "flex items-center gap-x-4 -mt-2",
+            collapsed
+              ? "md:justify-center"
+              : "",
+          ].join(" ")}
+        >
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sidebar-primary text-sidebar-primary-foreground">
+            <School className="h-5 w-5" />
+          </div>
+
+          {!collapsed && (
+            <div className="min-w-0">
+              <p className="truncate font-semibold text-sidebar-foreground">
+                Agent Portal
+              </p>
+            </div>
+          )}
+
+          {/* Mobile Close Button */}
+          <button
+            type="button"
+            onClick={closeMobileSidebar}
+            className="ml-auto rounded-lg p-2 text-sidebar-foreground hover:bg-sidebar-accent md:hidden"
+            aria-label="Close sidebar"
+          >
+            <X className="h-5 w-5" />
+          </button>
+        </div>
+
+        {/* Navigation */}
+        <nav className="mt-8 min-h-0 flex-1 space-y-1 overflow-y-auto pr-1">
+          {NAV_ITEMS.map((item) => (
+            <SidebarLink
+              key={item.href}
+              {...item}
+              collapsed={collapsed}
+              onNavigate={closeMobileSidebar}
+            />
+          ))}
+        </nav>
+
+        {/* Collapse Button */}
+        <div className="mt-auto pt-4">
+          <button
+            type="button"
+            onClick={() => setCollapsed((v) => !v)}
+            aria-label={
+              collapsed
+                ? "Expand sidebar"
+                : "Collapse sidebar"
+            }
+            className="flex w-full items-center justify-center gap-2 rounded-lg bg-secondary py-2 text-sm font-medium text-secondary-foreground hover:opacity-90"
+          >
+            {collapsed ? (
+              <ChevronsRight className="h-4 w-4" />
+            ) : (
+              <>
+                <ChevronsLeft className="h-4 w-4" />
+                Collapse
+              </>
+            )}
+          </button>
+        </div>
+      </aside>
+    </>
+  );
+}
+
+function SidebarLink({
+  href,
+  label,
+  icon: Icon,
+  collapsed,
+  onNavigate,
+}: {
+  href: string;
+  label: string;
+  icon: LucideIcon;
+  collapsed: boolean;
+  onNavigate: () => void;
+}) {
+  const pathname = usePathname();
+
+  const isActive =
+    pathname === href ||
+    (href !== "/" && pathname.startsWith(`${href}/`));
+
+  return (
+    <Link
+      href={href}
+      title={collapsed ? label : undefined}
+      onClick={onNavigate}
+      className={[
+        "flex items-center gap-3 rounded-lg px-3 py-2",
+        "text-sm font-medium transition-colors",
+
+        collapsed
+          ? "md:justify-center"
+          : "",
+
+        isActive
+          ? "bg-sidebar-primary text-sidebar-primary-foreground"
+          : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
+      ].join(" ")}
+    >
+      <span
+        className={[
+          "flex h-8 w-8 shrink-0 items-center justify-center rounded-md",
+
+          isActive
+            ? "bg-sidebar-primary-foreground/20"
+            : "bg-sidebar-accent text-sidebar-accent-foreground",
+        ].join(" ")}
+      >
+        <Icon className="h-4 w-4" />
+      </span>
+
+      {!collapsed && (
+        <span className="truncate">
+          {label}
+        </span>
+      )}
+    </Link>
+  );
+}
