@@ -31,7 +31,7 @@ const Activity = sequelize.define(
         key: "id",
       },
       onUpdate: "CASCADE",
-      onDelete: "CASCADE",
+      onDelete: "SET NULL",
     },
 
     title: {
@@ -59,6 +59,11 @@ const Activity = sequelize.define(
     tableName: "activities",
     timestamps: true,
     underscored: true,
+    indexes: [
+      { fields: ["repository_id"], name: "idx_activities_repository_id" },
+      { fields: ["occurred_at"], name: "idx_activities_occurred_at" },
+      { fields: ["type"], name: "idx_activities_type" },
+    ],
   }
 );
 

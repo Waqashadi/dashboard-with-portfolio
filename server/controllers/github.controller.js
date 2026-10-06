@@ -4,9 +4,10 @@ import {
   syncGithubActivity,
   syncGithubProfile,
   updateGithubProfile,
+  deleteGithubProfile,
 } from "../services/github-service.js";
 
-import { GithubProfile } from "../models/index.js";
+import { respondToGithubError } from "../services/github-api.js";
 
 
 /**
@@ -25,21 +26,11 @@ export const getProfile = async (
       data: profile,
     });
   } catch (error) {
-    console.error(
-      "Get GitHub profile error:",
-      error
+    return respondToGithubError(
+      res,
+      error,
+      "Failed to fetch GitHub profile"
     );
-
-    return res.status(500).json({
-      success: false,
-      message:
-        "Failed to fetch GitHub profile",
-      error:
-        process.env.NODE_ENV ===
-        "development"
-          ? error.message
-          : undefined,
-    });
   }
 };
 
@@ -61,21 +52,11 @@ export const syncProfile = async (
       data: profile,
     });
   } catch (error) {
-    console.error(
-      "GitHub profile sync error:",
-      error
+    return respondToGithubError(
+      res,
+      error,
+      "Failed to sync GitHub profile"
     );
-
-    return res.status(500).json({
-      success: false,
-      message:
-        "Failed to sync GitHub profile",
-      error:
-        process.env.NODE_ENV ===
-        "development"
-          ? error.message
-          : undefined,
-    });
   }
 };
 
@@ -88,6 +69,18 @@ export const updateProfile = async (
 ) => {
   try {
     const { id } = req.params;
+    if (!/^[1-9]\d*$/.test(id)) {
+      return res.status(400).json({
+        success: false,
+        message: "A valid profile ID is required",
+      });
+    }
+    if (!req.body || typeof req.body !== "object" || Array.isArray(req.body)) {
+      return res.status(400).json({
+        success: false,
+        message: "A valid profile object is required",
+      });
+    }
 
     const profile =
       await updateGithubProfile(
@@ -110,19 +103,12 @@ export const updateProfile = async (
     });
   } catch (error) {
     console.error(
-      "Update GitHub profile error:",
-      error
+      "Update GitHub profile failed:",
+      error instanceof Error ? error.message : error
     );
-
     return res.status(500).json({
       success: false,
-      message:
-        "Failed to update GitHub profile",
-      error:
-        process.env.NODE_ENV ===
-        "development"
-          ? error.message
-          : undefined,
+      message: "Failed to update GitHub profile",
     });
   }
 };
@@ -140,19 +126,11 @@ export const syncRepositories = async (req, res) => {
       data: result,
     });
   } catch (error) {
-    console.error(
-      "GitHub repository sync error:",
-      error
+    return respondToGithubError(
+      res,
+      error,
+      "Failed to sync GitHub repositories"
     );
-
-    return res.status(500).json({
-      success: false,
-      message: "Failed to sync GitHub repositories",
-      error:
-        process.env.NODE_ENV === "development"
-          ? error.message
-          : undefined,
-    });
   }
 };
 
@@ -169,19 +147,11 @@ export const syncActivity = async (req, res) => {
       data: result,
     });
   } catch (error) {
-    console.error(
-      "GitHub activity sync error:",
-      error
+    return respondToGithubError(
+      res,
+      error,
+      "Failed to sync GitHub activity"
     );
-
-    return res.status(500).json({
-      success: false,
-      message: "Failed to sync GitHub activity",
-      error:
-        process.env.NODE_ENV === "development"
-          ? error.message
-          : undefined,
-    });
   }
 };
 
@@ -192,24 +162,30 @@ export const syncActivity = async (req, res) => {
 export const deleteProfile = async (req, res) => {
   try {
     const { id } = req.params;
+    if (!/^[1-9]\d*$/.test(id)) {
+      return res.status(400).json({
+        success: false,
+        message: "A valid profile ID is required",
+      });
+    }
 
-    const profile = await GithubProfile.findByPk(id);
-
-    if (!profile) {
+    const deleted = await deleteGithubProfile(id);
+    if (!deleted) {
       return res.status(404).json({
         success: false,
         message: "Profile not found",
       });
     }
 
-    await profile.destroy();
-
     return res.status(200).json({
       success: true,
       message: "GitHub profile deleted successfully",
     });
   } catch (error) {
-    console.error("Error deleting profile:", error);
+    console.error(
+      "Delete GitHub profile failed:",
+      error instanceof Error ? error.message : error
+    );
     return res.status(500).json({
       success: false,
       message: "Failed to delete GitHub profile",

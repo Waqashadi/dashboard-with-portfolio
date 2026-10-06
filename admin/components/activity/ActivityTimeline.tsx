@@ -1,5 +1,51 @@
-���t'�`ळH���_���>Fdk���+�S,O.��-"��(I�²)7�@���$�b���v;�套d��6ZC)���yF�޸KW�7�FZ4Iq&����:�_v����K�����Qw+�M�W�V����C��0ѫ���HY��.#��W�p4���&Bf��DZ��9q�S9�_4���r�qN���*�=츺�����)��73��側�����eZ)e���o��?�F-x�^r�)��󌏄�;d��݊ab��*:KȒ��G�ϫ��-����;Z��p��7~p/��qG���ܔ.
-@����Dck|��Ost�5�\�qύ4�vԎ���=Zh�C�5Y�_Ov�"B7�Z{�	�@�,#��Չ����u�n�L��z�+:}��Rޒl8�
-Ncx*r�i�OPi�tI�];\�)���B��MH���S��܍��l.����	����^���  ���U	;�c�g��M�UOY'n�R�$$�:N0��!�`�#:�����-����8>�X����C�HHi�6J���'�Z�D��p�E�M�zTc��z09�o%Z�~���]��LT��h���F2�F�B��,X�C���{�cc���BTV�s�W�Kp����V&J!';�"_)I�����C��U_��V�v%B4h%����I�-6�{�$�T%�-��g��Y.I��)�5k����*����'�.�:{g��a���*C�v)���p���ф4/���-j�w�`�'���j���2�G���o��R��g���y�;b�%h2dg��Tᇯ���_+��|a@���9T��iG���ƇvϿCj���HrU,�]��儵���2�>v�.�*��q�N�ո���=Mz�H����:�,s�q����ݾ����%H��y
-�9p���(�G���'ɥ!.��(_�36)�ڳ�7=���Č�!'(�ڟ���ʂ��IE�k����aq�	�F��^�u�[�l�+�z)XO�̘ݶ�S�eڵ���
-9ʮ<C�Wۆ4�V��&���:��>�e�f��]�'y�X-D����(����_h"fV"$~�ڴF�u��\/������O:�Svr��!�����_�8f��j���<��@;��#C�j�9q����}̉�1�Cƌ�������e�b5�;3F!�h(�T��92�	tl՚-G_c�%����9�$�u{}fP�fJ�c1�u���Nä�+hAN-z$������:jbj[� [r��R�J����պSj���	�~�����s��ت�=���I��Ѷ�[]xU&R��q�bs�4�&��n�I(�=�+x4���-�T���ě��͕�-�z��� {+ڗ�]��6F���'k?��+H�I^�\*�Q� �&�WS�N�^�.�Kf~����A�V�Jص���&3b:�	t���;�:'��qt��W���3�,#���.��w)��կ�om�>�����ޝꯂd	�j�\��
+"use client";
+
+import { Activity as ActivityIcon } from "lucide-react";
+import EmptyState from "@/components/common/EmptyState";
+import LoadingState from "@/components/common/LoadingState";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useDashboard } from "@/hooks/useDashboard";
+import ActivityItem from "./ActivityItem";
+
+export default function ActivityTimeline() {
+  const dashboard = useDashboard();
+
+  if (dashboard.isPending) return <LoadingState message="Loading recent activity..." />;
+
+  if (dashboard.isError) {
+    return (
+      <EmptyState
+        title="Could not load recent activity"
+        description={dashboard.error instanceof Error ? dashboard.error.message : "Please try again."}
+        icon={<ActivityIcon className="size-5" />}
+        action={<button type="button" className="text-sm font-medium text-primary underline-offset-4 hover:underline" onClick={() => void dashboard.refetch()}>Try again</button>}
+      />
+    );
+  }
+
+  const activities = dashboard.data.data.activities;
+
+  if (activities.length === 0) {
+    return (
+      <EmptyState
+        title="No recent activity"
+        description="There are no GitHub activities in the dashboard response yet."
+        icon={<ActivityIcon className="size-5" />}
+      />
+    );
+  }
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Recent activity</CardTitle>
+        <p className="text-sm text-muted-foreground">The latest events included in the dashboard response.</p>
+      </CardHeader>
+      <CardContent>
+        <ol aria-label="Recent GitHub activity">
+          {activities.map((activity) => <ActivityItem key={activity.id} activity={activity} />)}
+        </ol>
+      </CardContent>
+    </Card>
+  );
+}

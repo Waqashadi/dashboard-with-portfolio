@@ -1,8 +1,51 @@
-��λ0��M��eb�3�N������yx�JΕ���2`h�?����F�3~l~�ˍ�(ӊ�$���>۔,`��Q���y4V�uQoK�P�98��T�ms�
-��.]~�"�K�f���R�w�g$�2�7�hZh%f�ي��/OO�5�|[�"�.�?d��KzP3�����Ja2����8�d�,����y�];�Q���볙�)Q�TUG�T�L��ѓ�Q!�\�FFm[�l��7c�"��LB-G�o�m��O��ښ�Y��y��Η(�wٖ/p�����g#Y� `Hs&E��+��$�&H��P8h�	�-�k���`p��R�o��|6�',���i:0�2
-8B
-���DL��M?��a��5�DR�<.��f�t�D8,��[��w6����L�Y�۶��\�q�/����|\��͍�P���eʒd#l�1�y.�3�K:yȓ��"OPRPM"���Z	��$]����ܬ������d��n��;���B󿡮0	�4�p7�����	ʎ�?�m�>�}b4574�Μ�4�
-�I�����j��	����N�F�*�	)H�KU�?j\�����H|�1�'(DU��e�u�7���)����tV��8Z~��E5v\
-~=���5�� �iNR-��T�%�M10�I�v�
-�ur7I/��+ O���kd!=ڬ�R�e�ܣθaL�!�ivč�"�3�sO��q�q��~�4�qEb��GB\��h �Hx�����|_3oD&3�;6j�+��ݳa%�㘕�\�߰N��u-h���-������+3�Gի���*|��}Bhp��8�<J���@������L��-"҅W
-�UЫ8�긠�#?g�Si�ȭT)���>�pkB�!�ۓ8��
+"use client";
+
+import { ShieldAlert } from "lucide-react";
+import PageHeader from "@/components/common/PageHeader";
+import EmptyState from "@/components/common/EmptyState";
+import LoadingState from "@/components/common/LoadingState";
+import ProfileCard from "@/components/home/ProfileCard";
+import StatsCards from "@/components/home/StatsCards";
+import SkillsChart from "@/components/home/SkillsChart";
+import RecentActivity from "@/components/home/RecentActivity";
+import TopRepositories from "@/components/home/TopRepositories";
+import LanguageChart from "@/components/home/LanguageChart";
+import ContributionChart from "@/components/home/ContributionChart";
+import { Button } from "@/components/ui/button";
+import { useDashboard } from "@/hooks/useDashboard";
+
+export default function DashboardPage() {
+  const dashboard = useDashboard();
+
+  if (dashboard.isPending) return <LoadingState message="Loading dashboard overview…" />;
+  if (dashboard.isError) {
+    return (
+      <div className="space-y-7">
+        <PageHeader title="Dashboard" description="A summary of your GitHub profile, repositories, skills, and recent activity." />
+        <EmptyState
+          title="Dashboard data is unavailable"
+          description={dashboard.error instanceof Error ? dashboard.error.message : "Please try again."}
+          icon={<ShieldAlert className="size-5" />}
+          action={<Button variant="outline" onClick={() => void dashboard.refetch()}>Try again</Button>}
+        />
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-7">
+      <PageHeader title="Dashboard" description="A summary of your GitHub profile, repositories, skills, and recent activity." />
+      <ProfileCard />
+      <StatsCards />
+      <div className="grid gap-5 lg:grid-cols-2">
+        <SkillsChart />
+        <LanguageChart />
+      </div>
+      <div className="grid gap-5 lg:grid-cols-2">
+        <RecentActivity />
+        <ContributionChart />
+      </div>
+      <TopRepositories />
+    </div>
+  );
+}

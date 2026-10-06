@@ -1,15 +1,59 @@
-7���_��f�t,�,�2�^��E����kR���:(�f�_���[���o��O:�k`���ܮn*@EL]��6�0�"�i���ww�q�8��'W�Aؕ](	.͈1�:�\$�o�&t@p#�|4T��Z6*�{t�������"#�[��^���J��1��;8\Z�O���R�m#׬b{{G��i�',ڃr�
-;�%2jh�=^Z�X/I������OGJ��8�"�K�(O�w�*e��%硬�	'g�|��7�N`Xe;�Fc��@1z�.!|��N���pf6˔c��\H.��Q��r�MmL�o�9<H�<�� �.<p�;'ލ���BcA���uڧ�=E��w8]@��[����A�B6FF؇r��Ce�a�M�����齹�$�?�<�[�d���W�{��d���>:�r�R�1�_�C����[㎃ҽ��Z����Y��^S�*���:-���rN�.�zS�ۢb�u�%����/g�b�l�3C���୳Vc;��i���EW�W�R��"�>���	�&D��E�����@��MW�B��=Ԋ&�8��A�.4�e�q��x���
-}��#�,��T��0�y���2i8��w6�Ը��_We4ءs��>�	�T�T�5�f�P�Nȳ��ƫ�9NM��6�ڈV K�-���',=̪�1��aZ{vhVt���U����-<���j7i�%�{��7���dϚ|��2��f\xF@qd�3
-���١@���ڶj�$�%ڗ����K�oc�p��Tz�[��½v�e8?�Q�ʤ�6X2��z�t9h���zzP�~Cȥ���)�ן��ϸmá���g���3�d�(�ձ_�tyQ8@0��G(�����ֵ0�ګ���&�X<�nm�g-�����\��xQ}�Q��,��l9�R|�-����	��Ͱ��;2[j�ڔ���j$����j]å�
-�g0j�鐄�y�.Ԅ��E��a'����3�����Qb��X�Dʗ5<���t��8\|��w$�Wɫ��Ԗ��$+�c��T<M�t=���ߌ4I�U�ٞ�]��3O�o��X希���j�L���_�ɾ�bZWi��@�+�!,�0�ô�a ��J��[�7�`w�y
-ʔN�u}�Kp먠��L��S�!A��{+b���<�I���5ɼ�����8=�v�������zQ�2��~ώ����i��vh�K��߼Gm��]!�\�}�W����׭��)��̘z��~0�liT'B�?3���jߣJ��
-&4�!�*w��Q��+Eoز��#]
-��xdX���	�k'C�N�D,n�1�l%�K�y�o�c�%�!`n/��6��k
-k������h� !υ�	:|�q�)�Km0�K�D{�A��aTjCL��N\ӧ�XZ#��!�	���iB%.����Y5��U̼W_��'z���jP��_o��ı�
-�!!_��H�+^�o���t�e���Qy!(��署ʟ�� #�g�v�\�Cg��}�K9�g�8U2ba~�5d��!a��>�?b'����&C[�WoX�.�Ǿ�e}�*m�w)?ш���W��#�|��o�U�n&U�O��!�I�&a�8�,_��HX�Y�n�rqi�T������*�P��D�?l��N7���A��aD�|ʣj�3Kk�
-���j�eN�?�"���Ȳ���?dC>4��z������7qMi�����Q�X�S'P�����τ�1�&�z��6JP13|���K)�UEi�S�>�sr��V5��;�,q����0t��U����e4���W����<D/f-�qt�|�懱��,�VE8��E��ӧ���mQ��F�F2@��
-8���;?�2P"�a����NJ��k��3 ����ʣ{�q����S� ��!���*�n?��n�x�q�A@�&�/��%��W��g�<^�x����I;��Lh��N���)+ecE��0L0�����8��NfC���!j���ŝ�+��I> -L]�E�Lh�4�
-�b!t93�%s� �?)t�_�
-OE�$�-J�<$�E�d����v$?3y6B4� IH�/B��q�	����]D9g�K��Dk0*���`�wTVf��2bG%�����FiJ-!=L����p���q���8�N)����4��o�M{��<c�J�<u�'�7��E�_܌s��yM�D�:P�Q�շ��(\����R�w����i:����C˰���m	F?6Fca�@b�B��
-�G:�<�&Қ�$�q�<.�-�(a06����%V�$F�_�^������0n��U>�I齏��P�|�E���.�����]g'fzSy��d�>�H�:Lv�+�E��n����;�����?I�_!�����50��R�	�	��/L3�BJ���Sn�VQ��<&k���#���l�F<�b�\,�)�Qm�#�[JJ�{��Ā`!��3���N�T8�P���U�ճ���i7��g'�~O(~�vM���w��<�q����ty���!�A���2��<oɄ;.<�?*<M��[ű�a�<Ƙi�Z��`�ZZ=������:fq=�>}~E*�e��Nڱx.�1�}���L���w-feb�
+"use client";
+
+import { useDashboard } from "@/hooks/useDashboard";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+export default function LanguageChart() {
+  const { data: response, isPending, isError, error } = useDashboard();
+  const skills = response?.data.skills ?? [];
+  const totalBytes = skills.reduce((total, skill) => total + skill.totalBytes, 0);
+
+  if (isPending) {
+    return <section className="rounded-xl border bg-card p-6 text-sm text-muted-foreground">Loading language data…</section>;
+  }
+
+  if (isError) {
+    return <section role="alert" className="rounded-xl border border-destructive/40 bg-card p-6 text-sm text-destructive">{error.message}</section>;
+  }
+
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Language breakdown</CardTitle>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {skills.length === 0 ? (
+          <p className="text-sm text-muted-foreground">No language skill data is available.</p>
+        ) : (
+          skills.map((skill) => {
+            const percentage = totalBytes > 0 ? (skill.totalBytes / totalBytes) * 100 : 0;
+
+            return (
+              <div key={skill.id} className="space-y-2">
+                <div className="flex items-center justify-between gap-4 text-sm">
+                  <span className="truncate font-medium">{skill.name}</span>
+                  <span className="shrink-0 text-muted-foreground">
+                    {percentage.toFixed(1)}%
+                  </span>
+                </div>
+                <div
+                  role="progressbar"
+                  aria-label={`${skill.name} share of language bytes`}
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={Number(percentage.toFixed(1))}
+                  className="h-2 overflow-hidden rounded-full bg-muted"
+                >
+                  <div
+                    className="h-full rounded-full bg-primary"
+                    style={{ width: `${percentage}%` }}
+                  />
+                </div>
+              </div>
+            );
+          })
+        )}
+      </CardContent>
+    </Card>
+  );
+}

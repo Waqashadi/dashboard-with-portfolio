@@ -1,3 +1,4 @@
+import { Op } from "sequelize";
 import { sequelize, Skill, RepositoryLanguage } from "../models/index.js";
 
 // Helper function to map language types to developer categories
@@ -39,60 +40,86 @@ const calculateSkillMetrics = (totalBytes, repoCount) => {
   return { level, score: parseFloat(score.toFixed(2)) };
 };
 
-export const recalculateSkillsFromRepositories = async () => {
-  const transaction = await sequelize.transaction();
-
-  try {
-    // Group byte totals and repository counts by language from RepositoryLanguage
-    const aggregatedData = await RepositoryLanguage.findAll({
-      attributes: [
-        "language",
-        [sequelize.fn("SUM", sequelize.col("bytes")), "totalBytes"],
-        [sequelize.fn("COUNT", sequelize.fn("DISTINCT", sequelize.col("repository_id"))), "repositoriesCount"],
+const updateSkills = async (transaction) => {
+  const aggregatedData = await RepositoryLanguage.findAll({
+    attributes: [
+      "language",
+      [sequelize.fn("SUM", sequelize.col("bytes")), "totalBytes"],
+      [
+        sequelize.fn(
+          "COUNT",
+          sequelize.fn("DISTINCT", sequelize.col("repository_id"))
+        ),
+        "repositoriesCount",
       ],
-      group: ["language"],
-      raw: true,
+    ],
+    group: ["language"],
+    raw: true,
+    transaction,
+  });
+
+  for (const item of aggregatedData) {
+    const languageName = item.language;
+    const totalBytes = Number(item.totalBytes) || 0;
+    const repositoriesCount = Number(item.repositoriesCount) || 0;
+    const { level, score } = calculateSkillMetrics(
+      totalBytes,
+      repositoriesCount
+    );
+    const category = mapCategory(languageName);
+
+    const [skill] = await Skill.findOrCreate({
+      where: { name: languageName },
+      defaults: {
+        level,
+        score,
+        repositoriesCount,
+        totalBytes,
+        category,
+      },
       transaction,
     });
 
-    for (const item of aggregatedData) {
-      const languageName = item.language;
-      const totalBytes = parseInt(item.totalBytes, 10) || 0;
-      const repositoriesCount = parseInt(item.repositoriesCount, 10) || 0;
-      const { level, score } = calculateSkillMetrics(totalBytes, repositoriesCount);
-      const category = mapCategory(languageName);
-
-      const [skill] = await Skill.findOrCreate({
-        where: { name: languageName },
-        defaults: {
-          name: languageName,
-          level,
-          score,
-          repositoriesCount,
-          totalBytes,
-          category,
-        },
-        transaction,
-      });
-
-      if (skill) {
-        await skill.update(
-          {
-            level,
-            score,
-            repositoriesCount,
-            totalBytes,
-            category,
-          },
-          { transaction }
-        );
-      }
-    }
-
-    await transaction.commit();
-    return { success: true, totalSkillsUpdated: aggregatedData.length };
-  } catch (error) {
-    await transaction.rollback();
-    throw error;
+    await skill.update(
+      {
+        level,
+        score,
+        repositoriesCount,
+        totalBytes,
+        category,
+      },
+      { transaction }
+    );
   }
+
+  const languageNames = aggregatedData.map((item) => item.language);
+  await Skill.update(
+    {
+      level: "Beginner",
+      score: 0,
+      repositoriesCount: 0,
+      totalBytes: 0,
+    },
+    {
+      where: {
+        ...(languageNames.length
+          ? { name: { [Op.notIn]: languageNames } }
+          : {}),
+        repositoriesCount: { [Op.gt]: 0 },
+      },
+      transaction,
+    }
+  );
+
+  return {
+    success: true,
+    totalSkillsUpdated: aggregatedData.length,
+  };
+};
+
+export const recalculateSkillsFromRepositories = async (transaction) => {
+  if (transaction) {
+    return updateSkills(transaction);
+  }
+  return sequelize.transaction(updateSkills);
 };

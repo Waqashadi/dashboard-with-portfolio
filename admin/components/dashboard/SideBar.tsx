@@ -2,242 +2,103 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
-
+import { signOut } from "next-auth/react";
 import {
-  LayoutDashboard,
-  Building2,
-  GraduationCap,
-  ClipboardList,
-  CheckSquare,
-  Plane,
-  ShoppingCart,
-  Wallet,
-  School,
-  ChevronsLeft,
-  ChevronsRight,
+  Activity,
+  BarChart3,
+  BookMarked,
+  Code2,
+  GitBranch,
+  LogOut,
+  RefreshCw,
+  UserRound,
   X,
-  type LucideIcon,
 } from "lucide-react";
 import { useSidebar } from "@/context/SidebarContext";
 
-
-const NAV_ITEMS: {
-  href: string;
-  label: string;
-  icon: LucideIcon;
-}[] = [
-  {
-    href: "/",
-    label: "Dashboard",
-    icon: LayoutDashboard,
-  },
-  {
-    href: "/programs",
-    label: "Programs & Institutions",
-    icon: Building2,
-  },
-  {
-    href: "/students",
-    label: "Students",
-    icon: GraduationCap,
-  },
-  {
-    href: "/applications",
-    label: "Applications",
-    icon: ClipboardList,
-  },
-  {
-    href: "/tasks",
-    label: "Tasks",
-    icon: CheckSquare,
-  },
-  {
-    href: "/trainings",
-    label: "Destination Trainings",
-    icon: Plane,
-  },
-  {
-    href: "/tests",
-    label: "Buy Tests",
-    icon: ShoppingCart,
-  },
-  {
-    href: "/profile",
-    label: "Accounts",
-    icon: Wallet,
-  },
+const navigation = [
+  { href: "/dashboard", label: "Dashboard", icon: BarChart3 },
+  { href: "/dashboard/profile", label: "Profile", icon: UserRound },
+  { href: "/dashboard/repositories", label: "Repositories", icon: BookMarked },
+  { href: "/dashboard/skills", label: "Skills", icon: Code2 },
+  { href: "/dashboard/activity", label: "Activity", icon: Activity },
+  { href: "/dashboard/github-sync", label: "GitHub Sync", icon: RefreshCw },
 ];
 
 export function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false);
-
-  const {
-    mobileOpen,
-    closeMobileSidebar,
-  } = useSidebar();
+  const pathname = usePathname();
+  const { mobileOpen, closeMobileSidebar } = useSidebar();
 
   return (
     <>
-      {/* Mobile Overlay */}
       {mobileOpen && (
-        <div
-          className="fixed inset-0 z-40 bg-black/40 md:hidden"
+        <button
+          type="button"
+          aria-label="Close dashboard navigation"
           onClick={closeMobileSidebar}
-          aria-hidden="true"
+          className="fixed inset-0 z-40 bg-foreground/30 backdrop-blur-[2px] md:hidden"
         />
       )}
-
-      {/* Sidebar */}
       <aside
-        className={[
-          "fixed inset-y-0 left-0 z-50 flex h-screen",
-          "shrink-0 flex-col overflow-hidden",
-          "border-r border-border bg-sidebar p-4",
-          "transition-all duration-300",
-
-          // Mobile drawer
-          mobileOpen
-            ? "translate-x-0"
-            : "-translate-x-full",
-
-          // Desktop
-          "md:static md:translate-x-0",
-
-          // Desktop width
-          collapsed
-            ? "md:w-28"
-            : "md:w-64",
-
-          // Mobile width
-          "w-72",
-        ].join(" ")}
+        className={`fixed inset-y-0 left-0 z-50 flex w-[17rem] flex-col border-r border-sidebar-border bg-sidebar px-4 py-5 transition-transform duration-200 md:translate-x-0 ${
+          mobileOpen ? "translate-x-0" : "-translate-x-full"
+        }`}
       >
-        {/* Header */}
-        <div
-          className={[
-            "flex items-center gap-x-4 -mt-2",
-            collapsed
-              ? "md:justify-center"
-              : "",
-          ].join(" ")}
-        >
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sidebar-primary text-sidebar-primary-foreground">
-            <School className="h-5 w-5" />
-          </div>
-
-          {!collapsed && (
-            <div className="min-w-0">
-              <p className="truncate font-semibold text-sidebar-foreground">
-                Agent Portal
-              </p>
-            </div>
-          )}
-
-          {/* Mobile Close Button */}
-          <button
-            type="button"
-            onClick={closeMobileSidebar}
-            className="ml-auto rounded-lg p-2 text-sidebar-foreground hover:bg-sidebar-accent md:hidden"
-            aria-label="Close sidebar"
-          >
-            <X className="h-5 w-5" />
+        <div className="flex items-center justify-between px-2">
+          <Link href="/" className="flex items-center gap-3" onClick={closeMobileSidebar}>
+            <span className="flex size-10 items-center justify-center rounded-xl bg-sidebar-primary text-sidebar-primary-foreground">
+              <GitBranch className="size-5" aria-hidden="true" />
+            </span>
+            <span>
+              <span className="block text-sm font-semibold tracking-tight">Waqas HaDi</span>
+              <span className="mt-0.5 block text-xs text-muted-foreground">Portfolio admin</span>
+            </span>
+          </Link>
+          <button type="button" className="rounded-lg p-2 text-muted-foreground hover:bg-sidebar-accent md:hidden" onClick={closeMobileSidebar} aria-label="Close navigation">
+            <X className="size-4" />
           </button>
         </div>
 
-        {/* Navigation */}
-        <nav className="mt-8 min-h-0 flex-1 space-y-1 overflow-y-auto pr-1">
-          {NAV_ITEMS.map((item) => (
-            <SidebarLink
-              key={item.href}
-              {...item}
-              collapsed={collapsed}
-              onNavigate={closeMobileSidebar}
-            />
-          ))}
+        <div className="mt-9 px-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground">
+          Workspace
+        </div>
+        <nav aria-label="Dashboard navigation" className="mt-3 flex-1 space-y-1">
+          {navigation.map(({ href, label, icon: Icon }) => {
+            const active = href === "/dashboard" ? pathname === href : pathname.startsWith(href);
+            return (
+              <Link
+                key={href}
+                href={href}
+                onClick={closeMobileSidebar}
+                aria-current={active ? "page" : undefined}
+                className={`flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-colors ${
+                  active
+                    ? "bg-sidebar-accent text-sidebar-accent-foreground"
+                    : "text-muted-foreground hover:bg-sidebar-accent/70 hover:text-sidebar-foreground"
+                }`}
+              >
+                <Icon className={`size-[18px] ${active ? "text-primary" : ""}`} aria-hidden="true" />
+                {label}
+                {active && <span className="ml-auto size-1.5 rounded-full bg-primary" />}
+              </Link>
+            );
+          })}
         </nav>
 
-        {/* Collapse Button */}
-        <div className="mt-auto pt-4">
+        <div className="border-t border-sidebar-border pt-4">
           <button
             type="button"
-            onClick={() => setCollapsed((v) => !v)}
-            aria-label={
-              collapsed
-                ? "Expand sidebar"
-                : "Collapse sidebar"
-            }
-            className="flex w-full items-center justify-center gap-2 rounded-lg bg-secondary py-2 text-sm font-medium text-secondary-foreground hover:opacity-90"
+            onClick={() => void signOut({ callbackUrl: "/" })}
+            className="flex w-full items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-destructive/5 hover:text-destructive"
           >
-            {collapsed ? (
-              <ChevronsRight className="h-4 w-4" />
-            ) : (
-              <>
-                <ChevronsLeft className="h-4 w-4" />
-                Collapse
-              </>
-            )}
+            <LogOut className="size-[18px]" aria-hidden="true" />
+            Log out
           </button>
+          <Link href="/" className="mt-2 block px-3 py-2 text-xs text-muted-foreground transition-colors hover:text-foreground">
+            View public portfolio
+          </Link>
         </div>
       </aside>
     </>
-  );
-}
-
-function SidebarLink({
-  href,
-  label,
-  icon: Icon,
-  collapsed,
-  onNavigate,
-}: {
-  href: string;
-  label: string;
-  icon: LucideIcon;
-  collapsed: boolean;
-  onNavigate: () => void;
-}) {
-  const pathname = usePathname();
-
-  const isActive =
-    pathname === href ||
-    (href !== "/" && pathname.startsWith(`${href}/`));
-
-  return (
-    <Link
-      href={href}
-      title={collapsed ? label : undefined}
-      onClick={onNavigate}
-      className={[
-        "flex items-center gap-3 rounded-lg px-3 py-2",
-        "text-sm font-medium transition-colors",
-
-        collapsed
-          ? "md:justify-center"
-          : "",
-
-        isActive
-          ? "bg-sidebar-primary text-sidebar-primary-foreground"
-          : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
-      ].join(" ")}
-    >
-      <span
-        className={[
-          "flex h-8 w-8 shrink-0 items-center justify-center rounded-md",
-
-          isActive
-            ? "bg-sidebar-primary-foreground/20"
-            : "bg-sidebar-accent text-sidebar-accent-foreground",
-        ].join(" ")}
-      >
-        <Icon className="h-4 w-4" />
-      </span>
-
-      {!collapsed && (
-        <span className="truncate">
-          {label}
-        </span>
-      )}
-    </Link>
   );
 }

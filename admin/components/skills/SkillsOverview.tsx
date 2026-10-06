@@ -1,8 +1,66 @@
-`]��ͳk�i�M?tC��)~K6��~��f�5�y����+���3a�p�����cO�����!��G+�������������ؐ�;�=��qMWxbU����п灡��wK��X,��.��{���"nqb��q�BwP!��a�l#�f�սHd�3ҥ=�*D��aU^�K ,B�v�ݞzT��1���/�k1�[���j�f頶R
-�+��h�V��pʨ�|�J|���>���T~�,�
-.�����\!�a���pg�
-A#�+Q�$:$��+��֕�y8�x9�0�R�G�;�{�ի[6�_(��
-�b�Bb��4���bM5���$G\�0'8j�/� ��?XWa	F��rM|�>C	1o�.BL43نT�3g�h��B��2��2Lv]�vhxd8�� 9�V "��@�*��K!V�U�?�B���}\�w/�}r�k������m�/��H���`�b.�:�TboQ��.�����E��Ѱp��u�ƥp��jg�0��c'���<��M=�=���q�`���%C�fg�⁴˓�P�~o)]&� 1�V�c��R6%��`9�iBb_ma*���@!#+t�J�U��*�(�#[0���:�v%��s�����5���Km�9���}=�}��g��3�6E�d:�y�өύ p��*1������sۇ�b9m���r����z�y���k#Z�i�xP5
-@0ٓ�Xr�ԝ�P���j(���ud�h�a�pN]r�}�z}9��m�ذ��e'ǹP&����Y�L���RE��x�pjL�S<-$��o���������+�E�U����ΟL�(�~��Dorsڏ=n-< �uȺ����ɾK�Q�]�P�7>�4	�,�i�2���zv��Aj�\`s$�`w�n)K�k�z�$�T�&/>1���O�\�9N�_>0����{Se:ՄY$ݭ�@A��܂��Z_ۦ��D\�OAHW3mv��k��c��L�}��w���]��z�@&r�/��X���?g�A_f��H9#��;��yCD|߀��5$�;9b\��$]���{h��J�����ry�G?��������z+(����ZD4�ფ�&��
-U�Q�6,���	�q_�,؏_�q�gZU���������'�T[<i���iO����V��ߢ-�4L
-ʂEɪV�i3�a�Q����M�:��E�nmz�pnku��:���Ӈ��}<�3�7)�]s����ˡɄ���3N�t^����C/\<�sI�V*��GUS��-��N;rI�O��I%t��\��qP>&)��qq|�����jW׮��>�j�����4�N<?�//n�Pi^D�V9�1���M���.�	4l��G�0cR���L���p��ǋ��O)zjm���
+"use client";
+
+import { Code2 } from "lucide-react";
+import EmptyState from "@/components/common/EmptyState";
+import LoadingState from "@/components/common/LoadingState";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { usePublicPortfolio } from "@/hooks/usePublicPortfolio";
+import LanguageBreakdown from "./LanguageBreakdown";
+import SkillCard from "./SkillCard";
+import SkillsChart from "./SkillsChart";
+
+export default function SkillsOverview() {
+  const dashboard = usePublicPortfolio();
+
+  if (dashboard.isPending) return <LoadingState message="Loading skills..." />;
+
+  if (dashboard.isError) {
+    return (
+      <EmptyState
+        title="Could not load skills"
+        description={dashboard.error instanceof Error ? dashboard.error.message : "Please try again."}
+        icon={<Code2 className="size-5" />}
+        action={<button type="button" className="text-sm font-medium text-primary underline-offset-4 hover:underline" onClick={() => void dashboard.refetch()}>Try again</button>}
+      />
+    );
+  }
+
+  const skills = dashboard.data.data.skills;
+
+  if (skills.length === 0) {
+    return (
+      <EmptyState
+        title="No skills found"
+        description="Skill and language data is not included in the dashboard response yet."
+        icon={<Code2 className="size-5" />}
+      />
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      <section aria-label="Skills by repository bytes" className="grid gap-6 lg:grid-cols-2">
+        <Card>
+          <CardHeader>
+            <CardTitle>Skill distribution</CardTitle>
+            <p className="text-sm text-muted-foreground">Repository bytes for the skills returned by the dashboard.</p>
+          </CardHeader>
+          <CardContent><SkillsChart skills={skills} /></CardContent>
+        </Card>
+        <Card>
+          <CardHeader>
+            <CardTitle>Language breakdown</CardTitle>
+            <p className="text-sm text-muted-foreground">Share of recorded bytes by returned skill.</p>
+          </CardHeader>
+          <CardContent><LanguageBreakdown skills={skills} /></CardContent>
+        </Card>
+      </section>
+      <section aria-label="Skills overview">
+        <h2 className="mb-4 text-lg font-semibold">Skills</h2>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {skills.map((skill) => <SkillCard key={skill.id} skill={skill} />)}
+        </div>
+      </section>
+    </div>
+  );
+}

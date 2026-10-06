@@ -8,13 +8,13 @@ export default function SectionHeader({
   description,
 }: SectionHeaderProps) {
   return (
-    <div className="mb-6">
-      <h2 className="text-xl font-semibold">
+    <div className="mb-5">
+      <h2 className="text-lg font-semibold tracking-tight">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-1 text-sm text-muted-foreground">
+        <p className="mt-1.5 text-sm leading-6 text-muted-foreground">
           {description}
         </p>
       )}

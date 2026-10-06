@@ -58,7 +58,6 @@ const GithubProfile = sequelize.define(
     email: {
       type: DataTypes.STRING(255),
       allowNull: true,
-      unique: true,
     },
 
     publicRepositories: {

@@ -1,4 +1,4 @@
-import { fn, col } from "sequelize";
+import { fn, col, Op } from "sequelize";
 
 import {
   GithubProfile,
@@ -53,6 +53,7 @@ export const getDashboard = async (req, res) => {
     // -----------------------------------
 
     const skills = await Skill.findAll({
+      where: { repositoriesCount: { [Op.gt]: 0 } },
       order: [["score", "DESC"]],
       limit: 6,
     });
@@ -137,16 +138,14 @@ export const getDashboard = async (req, res) => {
       },
     });
   } catch (error) {
-    console.error("Dashboard error:", error);
+    console.error(
+      "Dashboard request failed:",
+      error instanceof Error ? error.message : error
+    );
 
     return res.status(500).json({
       success: false,
       message: "Failed to fetch dashboard data",
-
-      error:
-        process.env.NODE_ENV === "development"
-          ? error.message
-          : undefined,
     });
   }
 };

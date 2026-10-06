@@ -1,7 +1,57 @@
-߀�E��I�+��KO{�z�N��ƌ!�j�_���b�.F:3�_ک�4N�}���zȾ�6�x�s�tV�E����gh?B��{�@�R�^ɴĘk���㤜8Mn�Ra�W��3�z����|�˺9P3���"�{��2��[o�wr�xG��N�O*��x�mf�+>���bn6	L^uJ���z�SDulj^�	��n�f��z�����G�l.�=�w3vM�l:��[�ė���"��9:ٚ6P���e��x�����:�CNXq�i�hU�I0|!К��K��zC9���eso1�Gٰ�k�sl�(��S��ʾ{�-}��_��N(5ٕ�f��.VJ:J���=���]�2x�EꦵV涨?{1��j�R��q�l1�e}s�#�[�D���Z}���z�����?l ���+�K#x�9�j��igW)�!,N���k�N0��y��9Ng��=�5Ӳx�<�X*�!JV��p��q�|�� ��G���s+��F��l�Co��،�4����*έx(BC�h��z�e�»x{(M�>]0�����r�;�&�J��KԗA0��iܾw&��q�RD顒[���һ��V�зR�> �\�K��9M`o\�s+P�J�6��7�	��#�۷D��Lc� ����p�k���������wG�1���wa�3�{�E�>r��L��p��:R���ǥ�SB�,j�{C�l��DЇ�l�H���+��f�ǫ�7�WJ.��~�j���y��&�Q!�-m�͓����T^����%s%:���M��T��m�Qw� )�����YwC��2����,uM�j�%��}��OQ��&V]����2�����ע��\σ��2
-�#֤�$R
-�I�<��D����������<��9�ر��
-�'@�~�O#�Z���d�`v�.�r�D��b��B�M��@΂���9&#$��!���訏�o�Ul�i��������ރ��g(3�7=ݔ��6$3�cx�RL\�]�ř�cJ�<c ș����r��/��"��v�XCL�\�$��^t�t1�{�K�e��<Q!�A7��·o����\��Ou;`�Ă��K�ƀ��+�'PA�<��b���땚`7�M囻��\�u@'��[����<W�;��$�	����s�%W{�����ڔ�DƓH)�е�i�w�ݶ�0�rE�8(z1~�倄YG_bE(�|�
-�?��0V���L�
-*bn](�n�`Cro���6��O_3c���lEr̞���.񛛃����ף���e�$LY�%2�;��(���W��C��,CΫ�Z��j��oL<�ݩ�r��v*f���}0��qs�*�R�A|v�'=XK�?�~�:U�ud+��2R0��r����FoA�D2��Bg��/,M�_}�IAX&^��i�ں&]J��{ X<��jq�e��CrJl��;l@x��^��㛰O���	%d�:l��b�M�Pm�x�	"��W�/��������EI�܄z��r�V�틀��L@D6��H`��'G�$A�k�c<��v��	��.?M�;]=� tl�`��~-�;T���������BՆ��#�>6Q�-���gb2MX%!�5��q�F5��f^����k�-:-sC���hw���95������^Ք�?�F�dI��!�:F{���,C^
-�xm�-�����c���)�F�F�C��� �SL��n��;�S�*��=��H����r�����{(X�5-�\Ԕ04�6��l���~̧c��f��-�j��^�@#9!v�)?0�~$!3d���'R�M>87 t�C%�M�`��o�'��A"l֥�X[�Q]��ĳ�6`���,x5~�E�#�����M6���˹M`����oY�j����չ�Ye�i�|��v���D0�M�"߰�L���N��oo��jn���8�G�98�W-�j?��{�S�a��5�E�c���k�:�|+�෾�լ���߈�$�H��$3E��nAՖ��!��%4����u������nJݏ��:S�(�(��a�D�u�[h�3�z3�D�h��嬝��ܽ��Tp���$�m��V�sHi!e��d��5�k���I���A�Q�8�dk��_	!�z�p��!��Z�l�,:{��^�^<�%?����/ţ�m��}���P`$��'I�M��.�����Y�)���+������u���r0�&��B�6�����\�ۢ
+import type { Skill } from "@/types/github";
+
+interface LanguageBreakdownProps {
+  skills: Skill[];
+}
+
+const formatBytes = (bytes: number) => {
+  if (bytes < 1024) return `${bytes} B`;
+  const units = ["KB", "MB", "GB", "TB"];
+  let value = bytes;
+  let index = -1;
+  do {
+    value /= 1024;
+    index += 1;
+  } while (value >= 1024 && index < units.length - 1);
+  return `${value.toFixed(value >= 10 ? 0 : 1)} ${units[index]}`;
+};
+
+export function LanguageBreakdown({ skills }: LanguageBreakdownProps) {
+  const rankedSkills = [...skills].sort((a, b) => b.totalBytes - a.totalBytes);
+  const totalBytes = rankedSkills.reduce((total, skill) => total + skill.totalBytes, 0);
+
+  if (rankedSkills.length === 0) {
+    return <p className="text-sm text-muted-foreground">No language data is available.</p>;
+  }
+
+  return (
+    <div className="space-y-4">
+      <div className="flex h-3 overflow-hidden rounded-full bg-muted" role="img" aria-label="Language byte distribution">
+        {rankedSkills.map((skill) => (
+          <span
+            key={skill.id}
+            className="h-full bg-primary even:bg-primary/70 odd:bg-primary"
+            style={{ width: `${totalBytes > 0 ? (skill.totalBytes / totalBytes) * 100 : 0}%` }}
+            title={`${skill.name}: ${formatBytes(skill.totalBytes)}`}
+          />
+        ))}
+      </div>
+      <ul className="space-y-2">
+        {rankedSkills.map((skill) => {
+          const percentage = totalBytes > 0 ? (skill.totalBytes / totalBytes) * 100 : 0;
+          return (
+            <li key={skill.id} className="flex items-center justify-between gap-4 text-sm">
+              <span className="min-w-0 truncate font-medium">{skill.name}</span>
+              <span className="shrink-0 text-muted-foreground">
+                {formatBytes(skill.totalBytes)} <span className="ml-1">({percentage.toFixed(1)}%)</span>
+              </span>
+            </li>
+          );
+        })}
+      </ul>
+      <p className="text-xs text-muted-foreground">Based on the language/skill records included in the dashboard response.</p>
+    </div>
+  );
+}
+
+export default LanguageBreakdown;

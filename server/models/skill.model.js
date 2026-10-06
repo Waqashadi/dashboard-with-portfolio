@@ -51,6 +51,10 @@ const Skill = sequelize.define(
     tableName: "skills",
     timestamps: true,
     underscored: true,
+    indexes: [
+      { fields: ["score"], name: "idx_skills_score" },
+      { fields: ["category"], name: "idx_skills_category" },
+    ],
   }
 );
 

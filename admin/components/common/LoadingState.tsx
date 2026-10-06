@@ -4,7 +4,7 @@ export default function LoadingState({
   message?: string;
 }) {
   return (
-    <div className="flex min-h-[200px] items-center justify-center rounded-2xl border bg-card">
+    <div className="flex min-h-[220px] items-center justify-center rounded-2xl border bg-card shadow-sm shadow-foreground/[0.02]">
       <div className="text-center">
         <div className="mx-auto h-6 w-6 animate-spin rounded-full border-2 border-muted border-t-primary" />
 

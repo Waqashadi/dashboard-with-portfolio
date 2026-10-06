@@ -1,7 +1,36 @@
-� `ܿ���Ay�J��ӄT��t��q
-p� .`es������@Z��؉�V���cts�#i����ϗrr*[�
-ܢTTDE�}�M��hz-h%���ft�h�1$�)?U@�M�Y����@|��5�ڪ���uX�+��J�1�EܬTQn�:n��=�^��-��%�>��-��mO��l;��=���{u��[�O��O_SI�������V��{|�5[`��~8�����EwΏ�7<;?R ^��؟)�tm6d���su|��K��?C�)e_�K�ˋ��Д�_���?dg��Q/�g.�������; �U��`�ב�I��Qg@�*�U	��ʏeY[��RFD�=</�F̥'&�E飓і�a;� 8l���Kf��":y|�M���T��k���S�������7S���[N�c"p��ξ�K�9���y�T��%�@yi��4$k��2x;~�d�CzЗYa�L7C~�T�����A�Qh>���9���݋�t�!��$���=3���iޅ><�ʛ���>
-�~z^�uK�_DP��
-k�_������ �4"�B�����Hw�zR��GJ�����?L�@H�h-�!�^��C���6���_�(�	8�dc��k����y������x�}<���]��g�?!����p4�֖�x7)������TL@&lTʅ��2azs�
-_��R�����F#!���i->�P(�e%�4�R=,�.����U�6M���~����
-<1�`���	g�7@��72�cP	o4+�)�D�	��^�ە�������/g��!�R�(jo�/ɺ]w8O5
+import type { ReactNode } from "react";
+
+interface StatCardProps {
+  title: string;
+  value: string | number;
+  description?: string;
+  icon?: ReactNode;
+}
+
+export default function StatCard({
+  title,
+  value,
+  description,
+  icon,
+}: StatCardProps) {
+  return (
+    <article className="rounded-2xl border border-border/80 bg-card p-5 text-card-foreground shadow-sm shadow-foreground/[0.025] sm:p-6">
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <p className="text-sm font-medium text-muted-foreground">{title}</p>
+          <p className="mt-2 text-2xl font-semibold tabular-nums tracking-tight">{value}</p>
+        </div>
+
+        {icon && (
+          <div className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-secondary text-secondary-foreground">
+            {icon}
+          </div>
+        )}
+      </div>
+
+      {description && (
+        <p className="mt-3 text-sm text-muted-foreground">{description}</p>
+      )}
+    </article>
+  );
+}

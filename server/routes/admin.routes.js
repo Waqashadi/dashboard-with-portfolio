@@ -9,8 +9,14 @@ import {
   deleteProfile, // <-- Import delete controller
 } from "../controllers/github.controller.js";
 import { getDashboard } from "../controllers/dashboard.controller.js";
+import {
+  authenticateToken,
+  authorizeAdmin,
+} from "../middleware/auth.js";
 
 const router = express.Router();
+
+router.use(authenticateToken, authorizeAdmin);
 
 router.get("/dashboard", getDashboard);
 router.get("/profile", getProfile);

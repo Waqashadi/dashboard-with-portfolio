@@ -6,7 +6,7 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 
-import api from "@/lib/api";
+import api, { shouldRetryApiRequest } from "@/lib/api";
 
 import type {
   GithubProfile,
@@ -24,13 +24,14 @@ export const useGithubProfile = () => {
     queryFn: async () => {
       const response =
         await api.get<GithubProfileResponse>(
-          "/profile"
+          "/admin/profile"
         );
 
       return response.data;
     },
 
     staleTime: 5 * 60 * 1000,
+    retry: shouldRetryApiRequest,
   });
 };
 
@@ -43,7 +44,7 @@ export const useCreateGithubProfile = () => {
   return useMutation({
     mutationFn: async (data: GithubProfileFormData) => {
       const response = await api.post<GithubProfileResponse>(
-        "/profile",
+        "/admin/profile",
         data
       );
 
@@ -72,7 +73,7 @@ export const useSyncGithubProfile = () => {
     mutationFn: async () => {
       const response =
         await api.post<GithubProfileResponse>(
-          "/profile/sync"
+          "/admin/profile/sync"
         );
 
       return response.data;
@@ -106,7 +107,7 @@ export const useUpdateGithubProfile = () => {
     }) => {
       const response =
         await api.put<GithubProfileResponse>(
-          `/profile/${id}`,
+          `/admin/profile/${id}`,
           data
         );
 
@@ -133,7 +134,7 @@ export const useDeleteGithubProfile = () => {
 
   return useMutation({
     mutationFn: async (id: number) => {
-      const response = await api.delete(`/profile/${id}`);
+      const response = await api.delete(`/admin/profile/${id}`);
       return response.data;
     },
 

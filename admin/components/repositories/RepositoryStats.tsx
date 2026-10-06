@@ -1,3 +1,35 @@
-��������꽞�C9�g�p�T֝��p�m`Y��V��q���W��7*�NWi�1���a�i\�X�/�@tj�����ɿʘ��wx-���ZG@܃"KZgr�J9�L!�=��h5�<񟍒�p~Ǭ��i�تh{h��g~�+���G��S��p5�>{}�2C�^1��;eu�u�r����,�e|���i�H��7�6�U@��2�rX[��{,jaNc9'�V8��=��Lr���jo$e]���~���;��]�eA�w��lJoij�R#����A�D�vM�������ѭH���n�ݻo��?�Ȼm���MI��`C��]�lN\|4N��5'��a���[P��S��5>���f�j�|�;��I��L���~��驣F
-����hr�? �xOl��9x���igW�.n7�7�@^��?a��۫ķ��x,��*C|X*�XW���9�/C9��c�㔭+bz+���׳̽��Bb� ;Q_�J;�٫��[�7�(W ���������G��vw_����]�1R��F���L��4��J�Q�8��=k�������DN��j�����n�� Ӑ���x[B&Q��?
-�����������s�����ZR�R����:)��w�-*�j��"5�@�I�l����v�?̪��xav=5�[��Tj�=Ĩ�.�Xr9�ŧ���\١n#�#���
+"use client";
+
+import { GitFork, GitPullRequest, Star } from "lucide-react";
+import EmptyState from "@/components/common/EmptyState";
+import LoadingState from "@/components/common/LoadingState";
+import StatCard from "@/components/common/StatCard";
+import { useDashboard } from "@/hooks/useDashboard";
+
+export default function RepositoryStats() {
+  const dashboard = useDashboard();
+
+  if (dashboard.isPending) return <LoadingState message="Loading repository statistics..." />;
+
+  if (dashboard.isError) {
+    return (
+      <EmptyState
+        title="Repository statistics unavailable"
+        description={dashboard.error instanceof Error ? dashboard.error.message : "Unable to load repository statistics."}
+        icon={<GitPullRequest className="size-5" />}
+        action={<button type="button" className="text-sm font-medium text-primary underline-offset-4 hover:underline" onClick={() => void dashboard.refetch()}>Try again</button>}
+      />
+    );
+  }
+
+  const { stats } = dashboard.data.data;
+
+  return (
+    <section aria-label="Repository statistics" className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <StatCard title="Repositories" value={stats.repositories} description="Public repositories synced" icon={<GitPullRequest className="size-5" />} />
+      <StatCard title="Stars" value={stats.stars} description="Stars across repositories" icon={<Star className="size-5" />} />
+      <StatCard title="Forks" value={stats.forks} description="Forks across repositories" icon={<GitFork className="size-5" />} />
+      <StatCard title="Languages" value={stats.languages} description="Languages detected" icon={<span className="text-base font-semibold">{stats.languages}</span>} />
+    </section>
+  );
+}

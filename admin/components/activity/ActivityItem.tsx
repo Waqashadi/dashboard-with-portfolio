@@ -1,11 +1,72 @@
-GF�3h+�k��k��-+����a���y �9����o���f�#�X 5:�����2ͻ����_�_�AR��}�x���������fk�KK�wb���GD�K����԰z;���%> =��0���=k���}ԑ�Rв����Vku��W�����-?��m2��I����t��۩����й+8Ϝ>]Rhe�W�
-h�B'?��y�j3��.O���xa��$�":'D�gID�\ƚ)j$�&�g���$_��6q�륙Ȓ9+�~�
-w�ǐ�}y�e��.��$u�]u����SvFp���ȹf�xh���C]aD�8l�&YAy�o��XŨė�S8zAE��a��d�V-����r�j�_f�Ct3L�Ļ����^�!I�i��J5f����slmբ���-�9�ȀC����C��p�d
-k�~�ر���h�!*�)������ ��������g�y�4���x3�.�px�
-��K%µ�ԛ5�e}���?��/_�=�G�&z�����9�Ǥw�w�v�-ئ�fY�!�9:��C/)��]�)f�zN0x�b#��X�a]��;Z\�"̀��\Đ��ʤ�� 5!����M�N���@�m[�0�ڍ��xnfb?���X%��״��E�5/�DS�rY�.&��@�t�.-��4C%pذ��@�ƍ �wz??���h3�ߞ��j'0�h3B�W�o����'�x4��"�eK3��Ew���@g��öm��%k����WfS�j����
-�F#�V��������tf`{*5�:�,��:�&��+��Bk٪?�ŦQg�<�߭2m�d~�
-�I=��;�Za�ٓ���;�i�5���yjJ������Y�X�F����;q�����ؗ:Dfg�����Rݍ#�<)�E���%)����A�[�Q�;�3<��HY�	>�^�hB�QB��H\�#��k.M�<�<Nd�A�zR�cǱ��to��J��]L�����u�r�m&�q��CXxư;a|v��$B�����IjO�υX�������3:I�}qg���ԭ��&JHJ7����R����l����Bf'��Hy��y��z$�{�5i��>���*x�ݮ�m�T���Z���W#22{����@��~�_�:oנ>B�=M.�ȼ��e�X������������*�G8�a�s��xZ0y�)^�Yt#%�S���Z��'y�h��	)-B��)8�-���X��%�W��7MV����l�|���i��,��=���{�[���%��u>b+���;oH�6��{\���Y��9�t�"��_�mu=K�CU�L2J��*����W����{!V��Q:�ÄG��7��\�}(��C�k���h��o����:��;���4�ê��1�����Ka!�x�*j�N.��"&�eRls�os=��W=_�bL�}]��oH�o����8j}.���@1λ���6dW~3���4.�(Vu���9��o��_�����e�ߨM@�ڃ���^�a&�Lv�r�V̥
-Pgm���"�|�\:�S�M#9A�h�V���[�]�h4ks $�Z�����lV2.Z�P';���6A}MjF$/+֦X���5)�N���Sq��\��hѫ��[(WV�T���<nE�n#���n?n��ЅM�GȜd/�$ݪ��!7��֙Z[���!�z�X�08�V�iޢ!�)
-⭱�z���	aCߢ_Q%���L�|a�jn���È4�SjBJ>uP���u!)@���+6�e��m�˽z��������yłk��Ú��(b��;
-���֏�ȵ�/XX{rM���>�}8�=�c;H;�'�N�S���Q�R4�a�j�wab/5Qׂ]<��6��I��#�F�P/&ų��N.�*~����7̓�$�`����̵-Яh��?���$�\����Z�j>�z1�E`��6��J�N��Ȁ{�|�8v�++���9�쑹�'��e�#1��1E}�P��
-�Һ��8����fj� �5���E�خ�<�_�V���[v��P�=cNE��#L����i�ؕ��B+�~�{��n�s���+D��bꅐ]G�������@]-��57FC5�JvK�[i{��������@�����Q)���'.���8z6c[a��k:ߓJ�$kj�0�\%Ƶ�`\�0
+import { ExternalLink, GitBranch, GitCommitHorizontal, GitFork, GitPullRequest, Star } from "lucide-react";
+import type { Activity } from "@/types/github";
+
+interface ActivityItemProps {
+  activity: Activity;
+}
+
+const eventLabels: Record<string, string> = {
+  CreateEvent: "Created",
+  DeleteEvent: "Deleted",
+  ForkEvent: "Forked",
+  IssuesEvent: "Updated an issue in",
+  IssueCommentEvent: "Commented on an issue in",
+  PullRequestEvent: "Updated a pull request in",
+  PullRequestReviewEvent: "Reviewed a pull request in",
+  PushEvent: "Pushed changes to",
+  ReleaseEvent: "Published a release in",
+  WatchEvent: "Starred",
+};
+
+const eventIcons: Record<string, typeof GitBranch> = {
+  ForkEvent: GitFork,
+  PullRequestEvent: GitPullRequest,
+  PullRequestReviewEvent: GitPullRequest,
+  PushEvent: GitCommitHorizontal,
+  WatchEvent: Star,
+};
+
+const formatDate = (value: string) => {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+
+  return new Intl.DateTimeFormat(undefined, {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(date);
+};
+
+export function ActivityItem({ activity }: ActivityItemProps) {
+  const repositoryName = activity.repository?.name;
+  const title = activity.title || eventLabels[activity.type] || activity.type.replace(/Event$/, " event");
+  const Icon = eventIcons[activity.type] ?? GitBranch;
+  const href = activity.url || activity.repository?.htmlUrl || undefined;
+
+  return (
+    <li className="relative flex gap-4 pb-6 last:pb-0">
+      <div className="relative flex w-8 shrink-0 justify-center">
+        <span className="absolute top-8 bottom-0 w-px bg-border last:hidden" aria-hidden="true" />
+        <span className="relative z-10 flex size-8 items-center justify-center rounded-full bg-muted text-muted-foreground">
+          <Icon className="size-4" aria-hidden="true" />
+        </span>
+      </div>
+      <div className="min-w-0 flex-1 pt-1">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+          <p className="text-sm font-medium">{title}</p>
+          {repositoryName && <span className="text-sm text-muted-foreground">{repositoryName}</span>}
+          {href && (
+            <a className="inline-flex items-center text-muted-foreground hover:text-foreground" href={href} target="_blank" rel="noreferrer" aria-label="Open activity on GitHub">
+              <ExternalLink className="size-3.5" />
+            </a>
+          )}
+        </div>
+        {activity.description && <p className="mt-1 text-sm text-muted-foreground">{activity.description}</p>}
+        <time className="mt-1 block text-xs text-muted-foreground" dateTime={activity.occurredAt}>
+          {formatDate(activity.occurredAt)}
+        </time>
+      </div>
+    </li>
+  );
+}
+
+export default ActivityItem;

@@ -10,8 +10,7 @@ const sequelize = new Sequelize(
   {
     host: process.env.DB_HOST || "127.0.0.1",
 
-    port:
-      Number(process.env.DB_PORT) || 3307,
+    port: Number(process.env.DB_PORT) || 3306,
 
     dialect: "mysql",
 
@@ -27,22 +26,11 @@ const sequelize = new Sequelize(
 );
 
 export async function dbConnection() {
-  try {
-    await sequelize.authenticate();
+  await sequelize.authenticate();
 
-    console.log(
-      "Database connected successfully"
-    );
+  console.log("Database connected successfully");
 
-    return true;
-  } catch (error) {
-    console.error(
-      "Database connection failed:",
-      error.message
-    );
-
-    return false;
-  }
+  return true;
 }
 
 export default sequelize;

@@ -1,1 +1,53 @@
-�?�$���&0M���n�����?̰e���4&^Axy��P�]�}�Li; ]&Fw8<U�m_�A�TsrM��łyllm�-K�t���F$8W��K5����\5���O��&�-8���J��[����C՞��oͩ��r�;a*�~7����w��J��j���Àd�t�'����>G7!�����ZG�G)𕰵��@�_j�$�1����{���/�!� ��9?�<��&�{����I0��H_����_9��x�LLzh~�������<��6�y �Em.+D�V�eF�t���S�U�cŎ�&?��E�(H���~�ۙ@�SA#�R�bit>��m5�p��w2ݶ�3!���Us��C�7Ńo�l�%�w�h,~�4}7�k�w�b�ʻ\�01�?�3��0�pI��5=)I�|��4�+=��I�,���ye�`lT���8Dcy�D5�C��<b<����߇:�J�x�cY�"CA�Q�Šؾ��p���/����i)B��F@]��L�ұ�~�>ޞw�/��BK�\Sd�������a�_(�.라%�������Q"�)������4pcZIŀ��N(�>5�8��ѥ;]�kѣBr�Xڜ[��>1���I0�;��k���,B�)�X�Z���w�K���:j�W@]��/T1�p�^�� ��Ё]�&��C�W��Щ
+"use client";
+
+import { GitBranch, Layers3, ListChecks, Radio } from "lucide-react";
+import EmptyState from "@/components/common/EmptyState";
+import LoadingState from "@/components/common/LoadingState";
+import StatCard from "@/components/common/StatCard";
+import { useDashboard } from "@/hooks/useDashboard";
+
+const formatDate = (value: string | undefined) => {
+  if (!value) return "?";
+  const date = new Date(value);
+  return Number.isNaN(date.getTime())
+    ? "?"
+    : new Intl.DateTimeFormat(undefined, { dateStyle: "medium" }).format(date);
+};
+
+export default function ActivityStats() {
+  const dashboard = useDashboard();
+
+  if (dashboard.isPending) return <LoadingState message="Loading activity statistics..." />;
+  if (dashboard.isError) {
+    return (
+      <EmptyState
+        title="Activity statistics unavailable"
+        description={dashboard.error instanceof Error ? dashboard.error.message : "Unable to load recent activity."}
+        icon={<Radio className="size-5" />}
+        action={<button type="button" className="text-sm font-medium text-primary underline-offset-4 hover:underline" onClick={() => void dashboard.refetch()}>Try again</button>}
+      />
+    );
+  }
+
+  const activities = dashboard.data.data.activities;
+  const repositoryCount = new Set(activities.map((activity) => activity.repositoryId).filter((id) => id !== null)).size;
+  const eventTypeCount = new Set(activities.map((activity) => activity.type)).size;
+  const latestActivity = activities.reduce<string | undefined>((latest, activity) => {
+    if (!latest || new Date(activity.occurredAt).getTime() > new Date(latest).getTime()) {
+      return activity.occurredAt;
+    }
+    return latest;
+  }, undefined);
+
+  return (
+    <section aria-label="Activity statistics" className="space-y-3">
+      <p className="text-sm text-muted-foreground">Summary of the recent activity returned by the dashboard.</p>
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        <StatCard title="Recent events" value={activities.length} description="Events in the dashboard sample" icon={<Radio className="size-5" />} />
+        <StatCard title="Repositories" value={repositoryCount} description="Repositories represented" icon={<GitBranch className="size-5" />} />
+        <StatCard title="Event types" value={eventTypeCount} description="Distinct event types" icon={<Layers3 className="size-5" />} />
+        <StatCard title="Latest event" value={formatDate(latestActivity)} description="Most recent event in this sample" icon={<ListChecks className="size-5" />} />
+      </div>
+    </section>
+  );
+}

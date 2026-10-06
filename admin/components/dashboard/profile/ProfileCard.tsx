@@ -1,36 +1,75 @@
-n�E�MpD�MQlί�{�
-�t��Xq`����2��4@��ҨV��G�Ϸ�MHć͑yHB�e�A�&G��ax'p��w���w��*�x�XsbQj�&%gG�����yyn'LT�S�I��$y�Z���'�a���|���CR����߱2��FhXѮ|'{hYF��?�%L7��,�\��:�c�b/�\�x��'\����qDLJ8�܍��漳Y�O���4f��0���ߙ�#?{��k�^P{�-��(;b�d�!%y�&}��3]��(��<�em��7nS�jq�V��KĲ9�Rl�D��cVN���5a�5ڈ	q�Wv��O+C���JT�5܀�����U�M+b��G��.���~���ّ�b����m�<1O�pڎ�c��Y�E�/�M�c��.'�j��&X���`p'[Sai��3�;������I��:
-X���p��د�%A�ـ�"�g랤��c���20*��lҨ�ׂ��ZY���PKm�G��rs;d����}P��0�\Ѡ�:%�l���]�u�j/f�;ʆ.Y�8��{RJȡ���+B��w��AOI6���5���:� �^}40�/i��Aٹ��F���;?é�Ј͏�Y����I�7�8eat�e*�v�S�����W�2}l��H�i|�� �Ą�׼_R�޷���q�Z�^	�d�����5�QP�E�<4�Ьxyrd��4	3m=��	D��5�{�y���etO���!�|r��"�m�N�)�&R�kƞ/�o��M���;O��ʈ�l1���it�z��~��pkq�
-����А0r����ZJ���7�b���8�Iѡ�Տ�S�K	9��<K$���hU,F�B�edZ�k��2��>��;إ��c��	��V5�l�ZKEu1B�v{+�J�O5�y���A୞��ŧ��bX�]�oHd���7�Eps�< m��:Od���w�������p�Y�5�%����^W�'Lx�����B�:=Z=����*#�:��{��btNK��F���9$�s�:z�2;B�H�/}���9m�1\��j���B���"<Â�I�zt.���/sO/��h�H_$1���%�e%W;oNSeu�\s�{d܈��c�����3��x���y?�<��)Il(�b[g&�f�j��'��&Down�"�'�7���Q��.��W��U,���F��n�%���H�M�n#���!Ec�8��V�ߒ�2�&�~����&��7�76��T�$߫3�6��n[��%)��}��Ӡgҩ^%�a�`SIW^/��H$^��$*�wy�����s�B#S
-/�t��ڨ�����bGP).-�g؈E�E��[�V�����vY�$��a�%E�9q%΄������@v���tq���p��#�l�Ҵ���yQ3�W��S�0אL��Hx����^A��.Bx��N�L�Q�N?��e,�f��bL�(4xC���m3=]sW��a2�C�5*<��mF���ɵ6b���A/�)k��f��^r���
-�e�f��#|���T �x�4�E!	���
-1���`�ǎ���w�}$��7&���EJ���=:	OLy=�<��;hT�v�l�\$��3��zm�H1}p�<r-�D伿�Թ��h�x��+�L�K�G���┏k��?_�F�]�ۤD7�"8����g�>^	��f`�se�҈�mU��l�KT��d�WG�{T��AHg��d��%Y����8�L�iK��xQ�7�bx�3X��ا���O�%��ɠ��#�q�	����,�!+M��̈J@e7�m�ȷB◌ù1�r]�C���������L�O����~8��FJ�݀x;�"��Ab9��!�0�`2\Z�FI�BW�Lc
-�F��
-����G�q߃@�8�b���bf3tCUͣV�q}��*��X��t��.Ta��a���т�7�� J���� ��<@�s����j�zO�����n��:{���b�OPgX�tD��-1���
-Zl-�,�ୢ���B�zWk�P/2�H���������a,
-�1��ݹ���[�3�+�v�	���I!�^�N��w�Eq
-=��a�)%�6�Q��0��c{{��nt�[A���R2��-2�m8.�s{/�=����=@��w��WQ�ڝ±45��� �T���W��#�fSm�I�t\���&�q�
-D]ɦ�,�n!I1�}�h�+�<�xf��u����t��^�9L��y�@�M�-C�',KF�F��˱��8�xiu{8�Љ�p�f�,���8!&�<%�4#�q� ���♯�Fc��o	�(}7�z*Ői7l�Z֟�{ �*OU��k�a��G=�?.�w�k�vn�8��,���z��dݑ^�^%����B���v`BEn u,6�~�Wq&�X�q����M�)��R�rמuq����2�k�����y�����X_�<��0U�k�T@\@WG���{����n�Y�L�̡GS�#��������L!�f���x���<A��D=R?نп��j
-9wq�ig-��ʮf�e(�)�X��*m�w���x�x�(��یw3]摊@t�U�F�'�����Fa�����趝K�0u'�l��S���e������q�cz�Lz���4��^�q�L�
-�4%�A������gH��@\�Vܪ!�L?�Ɍ��U�=Uf��Q ��h��|���a2�%|��<
-[��J�}��D���"h|a���Z�B��5Y�:��"x#�[Y>�qH�e�g�{�>n�hl:��?(HY���]��R�	8��g}���kx��{�ezEՊ[ډ����mU���.�d"��t"T�VE5@�_����j�@|��wC��j|$��#���2���<�x>,x:W�DɲI�U�H���<�=V�is4����"�xd�α�L|���5�5��ʈ�$9�FJU��@��9������L���>���VØc�����g�KCg
-t7F#55����X,�)��1�ґ1�bB��[w�8^F���xJ1�k`C��c��-p`��*��0�:F�I:T�Ax�p��<ꇙ
-q՜�&����-`Uk�l�?A4y=���r�z�L��z^��!�AM1�VޘΘE���3��y��A+������M+8T�Q\�k��p.��V���K��n�
-���i�fm,�:p�S�h~�8;H2>�]K��#�tE��,�С��ܒ*�����[�3����J�|���&MP���N���x��c�W��4�3��,s�a\�N�.�I;��B�����y`t����g,D�a��c��:�q^\���D5�Q��l)<
-��_��l��F` >��/�k�<vX��q3\��13�G��)j|�:i;\�>`>3�Ȑ�5�������ݯWl�8þ�UX�Ny��(��[kZW*�a숕��[���lX9��j��%��HW$e(66A����7ZBf������5bfR6���;�т��l�Z�U��2
-��`�LSW��3�ݓ���u�Cߴ�	�?5��s;�x�������@@�Ź&�*J��p�*��Q�x��Ӣ��a��4l��[�3.8LN�RȎ��\�+�[`ĪN(�c���j�t����֌�HЛT�_�� )Y=ZN����7:M(������U?xP�콘X/.G�C^-������Y-��G[��+�k�n7�'�_�����&���q��� �
-�sY[L�e;�� ����"�,D�WD��v��\�
-'���l�9���]&��BC��>��.
-#�W'����@�sg��L*G�r���Mr�[-y����Z���3I���LJ?L$��*_ޘ�CM��-R��f��))�Y9�D�r���6�u��&5Ѵj��<�zb����l���U�0��2�d�[ua�'su�Օw����`�>~����K��Z�sc7���/�*���U�d���0��:>����E��Q���Ԉ��D�nQ�)��I��9}G��D��/�����#����o4�z~^��"�,�8�s�-Ҥ�R��D~"\��
-���qD�,��Df�G@%��0_F}1#'Lc	�[�"s�;�L�G�P�ceܦ<Q�e���j��s^�**��v\�������m2!���]�%�Vz���y$�t�'0��J錫�4�ݙ?s�S�&����譭��(���P)�l���c	��V)S��,h�4&��=I�7f��ԑ�� ����||�w�q�R:Y�]��y�H����8�%�t0仠a7���~��F��;�U֨��ܖ1�5�E��+��LUA�<s?nfj���0}1}=��T��9*>��P_�����b�D��!��q��14~t���Ef-6�]�~��vZ�}�c�ٛ�z"��l�E��
-߂��N�$>{�vp�hNqI�),��E���u�kF	ދ�j�ZW�~n�Vo�Ub���]��r�_�*�q�	둡�	Y��5o��h�f�oGwTGSs�E��}���y�T���j�3L&z��Z_�38����to�r����R㛛��_Jp���=�\�coqS`��s��g�����k����<3��[sG֯#7|dX bjojk���Ҷ#�� Ul3{_�,�@&��R�	Sµ�i-Oq0�0���隻Yъ�f�L�vl4�Y�/��U0)o�T��$*�0����n\���&�ƫ�����a&��^�(H��U)Jf~�Co�aiGW}��J�`B�T�9�z����iQޙc;F�{�w-PJwC�>p:P��D�J�
-�#q��(�T9���ץƋHV�Q]��Y�����8�qͣ�gⅥ\�Xh^˕ߩ�&,Z�{V\��T��5t��?c���x	^�#u�	E����K����{)�
-�#��خ\�>��Zdeժ�7݇W����#%r^(�ϲ?�����Ζjn��~-�AE�7�:��6x�iMR6��(Q�m(��<�qk�^\������+��ʜ��C���NK(]��9=<"�#�M�և����������Ќ��3[+���q�c��9>fں&|�^�d���0�T(\���U�W�������3�(V�|01К��,��D'Iڰ���z�g��T/g^Ѯ�]�8��1V����t�;9�D��5�I�+��b.�8T�+<��5k�z���'�>�H@�hqK�wh�a����l�� L���W�-c�����|���
-ê��@�R����~�A䭧Y	��Q�6V��Xl��H�lp��ӭ5mip���2��`��|���)��n�]��UV!$�XrQ&C�M��th�j��׶0[O��'�@�����0:���k�)We�N\8Q�/=w㖥��3�ۣ˙L��C�6[SƆ]хl�j�%�
-���Kכ}�(�f!L�/��8�5Kf+1�ڽ��4��o��.!�=��6����=2yЧ?IwFv��������JT�����#�����DV痔MX�~�'6LFP�"(���
-�1��r'w���ՊQs��K�<l4p>Lh�+�Y'MjLc�����vy�ԟ�Um�H���T�e�-S���h`	�z�6�5nv�v!G�tX�koϛ(�P�$z߰����>���z4�P,�H"<�.p�0�c���^�Y��c�U0[7�w+��Iƽro��rͯT\����(�g�&��9���֡X�x$�XT1h�z�����hBt�ǣӆӃ-H�ߡ���&��ѽ�FD�	�:��{u���%���:�"��x%T��0��?Y��c���5�2���uMU�������6+��!�iV�^y�y]+��y�N:R�������1{�b�A��;�\~ #܃d���|ϵq�5ZeT��[�p����l�߷����P8�By8V4E;�E%����VkZ�j���N��<�u�/dG$��h,��0[�'����&b����:jr�7�,n��za��3P��/Mm�6����?y��l���#���s���ƻ��>}a[��ߕ�`r�����WU^s���a��Z���K3p��5��7���"p�eI˱�;�C���a������z�H����g�p���gA���λGS@p��"����n���1�5O*����ݬ2���ՖV�UW8ٮ8����vsτ�PY��d=Jf����J�q��Աn����	|�Тϊ�	��m`�1�B�AX�)���eW)+�{}��_����:	rA܎s"s���RO�C�|������b�5�n~)�W��o� �~�Hɔ��='X<kɗ�	�?iY6 ��hS��k��U��9�ُt�@�&)sj���8F�I[Khc���~�:V"*��:�o]�
-��j���c�5|�
-t)��%�v��8��ݛ]��U�����\m�a�Ӯ���HJSY��8V4���ǳL7��+�7�p��οK�r�a���<=֜S���)m�0���,I�G�D�O}�Vw�'hm���7W�괻ޑ�Rb%�,t.՚��	�3��+_8�ɍy���&��G<�[���~��[��୼3�?Y�7(>:���c#�~�m�Mg�g�3vϊ���7�ײ��>�J7I�^�l��g�ԅ���\��[�\ h<�{أG	�R���z�5+42W����L\�r�
-���W�f�TG�ϭǞ�2�q���͌�\�ن�,�÷'0)g���w�`�U�F��x?׎����oB�^�u���ˠ�}0�_#
-Q�� 
-�=�i�Y���sO�4����]���S�z�L+~�B�U
+"use client";
+
+import { Building2, ExternalLink, GitFork, MapPin, Pencil, RefreshCw, Users } from "lucide-react";
+import type { GithubProfile } from "@/types/github";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
+interface ProfileCardProps {
+  profile: GithubProfile;
+  onEdit: () => void;
+  onSync: () => void;
+  syncing?: boolean;
+}
+
+export function ProfileCard({ profile, onEdit, onSync, syncing = false }: ProfileCardProps) {
+  const displayName = profile.name || profile.username;
+
+  return (
+    <Card>
+      <CardHeader className="flex flex-row items-start justify-between gap-4">
+        <div className="flex min-w-0 items-center gap-4">
+          <Avatar size="lg" className="size-16">
+            {profile.avatarUrl && <AvatarImage src={profile.avatarUrl} alt={`${displayName}'s avatar`} />}
+            <AvatarFallback>{profile.username.slice(0, 2).toUpperCase()}</AvatarFallback>
+          </Avatar>
+          <div className="min-w-0">
+            <CardTitle className="truncate text-xl">{displayName}</CardTitle>
+            <a className="text-sm text-muted-foreground hover:text-foreground" href={profile.profileUrl} target="_blank" rel="noreferrer">
+              @{profile.username}
+            </a>
+          </div>
+        </div>
+        <div className="flex shrink-0 gap-2">
+          <Button type="button" variant="outline" size="sm" onClick={onSync} disabled={syncing}>
+            <RefreshCw className={syncing ? "animate-spin" : undefined} />
+            Sync
+          </Button>
+          <Button type="button" size="sm" onClick={onEdit}>
+            <Pencil />
+            Edit
+          </Button>
+        </div>
+      </CardHeader>
+      <CardContent className="space-y-5">
+        <p className="text-sm text-muted-foreground">{profile.bio || "No bio provided."}</p>
+        <div className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-muted-foreground">
+          {profile.company && <span className="inline-flex items-center gap-1.5"><Building2 className="size-4" />{profile.company}</span>}
+          {profile.location && <span className="inline-flex items-center gap-1.5"><MapPin className="size-4" />{profile.location}</span>}
+          {profile.email && <a className="hover:text-foreground" href={`mailto:${profile.email}`}>{profile.email}</a>}
+          <a className="inline-flex items-center gap-1.5 hover:text-foreground" href={profile.profileUrl} target="_blank" rel="noreferrer">
+            <ExternalLink className="size-4" />GitHub profile
+          </a>
+        </div>
+        <div className="grid grid-cols-2 gap-3 border-t pt-4 sm:grid-cols-4">
+          <ProfileMetric label="Repositories" value={profile.publicRepositories} />
+          <ProfileMetric label="Followers" value={profile.followers} icon={<Users className="size-4" />} />
+          <ProfileMetric label="Following" value={profile.following} icon={<Users className="size-4" />} />
+          <ProfileMetric label="Public gists" value={profile.publicGists} icon={<GitFork className="size-4" />} />
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+function ProfileMetric({ label, value, icon }: { label: string; value: number; icon?: React.ReactNode }) {
+  return (
+    <div className="rounded-lg bg-muted/50 p-3">
+      <div className="flex items-center gap-2 text-sm text-muted-foreground">{icon}{label}</div>
+      <p className="mt-1 text-lg font-semibold">{value.toLocaleString()}</p>
+    </div>
+  );
+}
+
+export default ProfileCard;

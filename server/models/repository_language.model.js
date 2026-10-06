@@ -37,6 +37,21 @@ const RepositoryLanguage = sequelize.define(
     tableName: "repository_languages",
     timestamps: true,
     underscored: true,
+    indexes: [
+      {
+        fields: ["repository_id"],
+        name: "idx_repository_languages_repository_id",
+      },
+      {
+        fields: ["language"],
+        name: "idx_repository_languages_language",
+      },
+      {
+        fields: ["repository_id", "language"],
+        unique: true,
+        name: "unique_repository_language",
+      },
+    ],
   }
 );
 

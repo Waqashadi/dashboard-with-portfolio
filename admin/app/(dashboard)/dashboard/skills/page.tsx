@@ -1,9 +1,11 @@
-import React from 'react'
+import PageHeader from "@/components/common/PageHeader";
+import SkillsOverview from "@/components/skills/SkillsOverview";
 
-const page = () => {
+export default function SkillsPage() {
   return (
-    <div>page</div>
-  )
+    <div className="space-y-6">
+      <PageHeader title="Skills" description="Review language and skill metrics derived from repository data." />
+      <SkillsOverview />
+    </div>
+  );
 }
-
-export default page

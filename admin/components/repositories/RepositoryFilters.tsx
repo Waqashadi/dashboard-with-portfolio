@@ -1,5 +1,41 @@
-h�Fn��ZWE�C�%g��u'�oJ�����~Q3�2���b�\����
-ZM�׀<�˱����8
-`Uixh_9v'��C�F��zs��.�e�k�kצT(�Ѓ�Rr���H�hy滝Vwi1*��_�6�WFr� �?��+i�`��̔�ǭ����(&Ϭ���s�]�w�4�'��"c��h&�K�+��M;ȷ���\c�A�3�ol�s�`�֎t#�?��(9�I2�銗}q��F��M<��*��{�k!;�OhI��[��i^o�| ХPC$���+4����:�.������^=YX"6�I��,;6���O�>x|���m4�;�?R��d	7,#����}@�.���6�v�%=����\E[f�_b��y7;U��,�����K�+�`}�䏲;�k�+���$@]ï^����W�O�U�o�7:&���t�iH�QF�!pyڄ���7P�h��T���3�t�&T�����z�'�e�W��I��ѧJO�K1K�\�.���TTO�/΀g�2��6�+��{yA�&��V�,�4?C�u��~�biy�LL�� U��ʃX*���x�������Y�:����[���������k��]O��D.D�W�t�>�
-*��E�=�e�F}6�A�V����'�)�#f�LX��w�=t}�����lM�{�ջr�V,���т;�/�n�D�����t ���<Gq�?åŨ���c#�U^�F!N�ѓ�<
-���Ӓ�Q�c��*M��I>ZR0y:�kʄ=҅�z�(o��c�O����k��㩣U�B詓#����=�'�R�3�e�����0�><]Y��ng��-�a�l���D���L>��MI�SOq���)�K�VJ�KY
+"use client";
+
+import type { DashboardRepository } from "@/types/github";
+
+interface RepositoryFiltersProps {
+  activeFilter: string;
+  onFilterChange: (filter: string) => void;
+  repositories?: DashboardRepository[];
+}
+
+export default function RepositoryFilters({
+  activeFilter,
+  onFilterChange,
+  repositories = [],
+}: RepositoryFiltersProps) {
+  const languages = Array.from(new Set(
+    repositories
+      .map((repository) => repository.primaryLanguage)
+      .filter((language): language is string => Boolean(language)),
+  )).sort((a, b) => a.localeCompare(b));
+  const filters = ["All", ...languages];
+
+  return (
+    <div className="flex flex-wrap gap-2" aria-label="Filter repositories by primary language">
+      {filters.map((filter) => {
+        const selected = activeFilter === filter;
+        return (
+          <button
+            key={filter}
+            type="button"
+            aria-pressed={selected}
+            onClick={() => onFilterChange(filter)}
+            className={`rounded-full border px-3 py-1.5 text-sm transition-colors ${selected ? "border-primary bg-primary text-primary-foreground" : "border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground"}`}
+          >
+            {filter}
+          </button>
+        );
+      })}
+    </div>
+  );
+}

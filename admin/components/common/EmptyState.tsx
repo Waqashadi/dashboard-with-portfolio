@@ -1,4 +1,35 @@
-�ĝl8Q=����:�'p.=�v��q*���@�5꩓г�Y���+5�H/�=S0�qgxM��?�$7�s���,wlf�=�@��
-����5X�I��e"]>�npI[���q�̤У'ocQ�[�W��v`���KO�؍XP�>��"
-ș�]��5e �x�*�4���8�#�Up"	�T��0}��&��-�����}�R u�I6�@��H�'�A����-��4�%X���[�&��Vő��3~90 ���'�#,u�2�m��)p���%�ez9w��v&W��/�g�?����Nc��Sɂ�C1��1�j���,�n�*[��Ǆ��i�!?L�2��� LXZ�8z���pL�dA���C�J�e�J�H^ �����3S*%w��s
-��*P�Z��,U��B�N;.@2v7��c��+��eZ����댰\[���G1�ǚ0�dt{u}P�zJat0��Ƒx�k��~_�f�\x�a�v0B�_,!vH)��VS�`��vz��"��x�!/����������g���wK�dz|�{RI�58�Nh�����e,���s=/^ºg���;��ƀtȳ}��N[�P�[A����]�.��R�(yZq�-f��!g6Լ�pP���J+iZ�q�"���όT�mzE*5��aSzO̮	6=���?"~]�H�D�.�ݳ<PŷJ��fZ���n� �9�:�m���l��<�� n1NOL�wx4����Q�y4
+import type { ReactNode } from "react";
+
+interface EmptyStateProps {
+  title: string;
+  description?: string;
+  icon?: ReactNode;
+  action?: ReactNode;
+}
+
+export default function EmptyState({
+  title,
+  description,
+  icon,
+  action,
+}: EmptyStateProps) {
+  return (
+    <div className="flex min-h-[220px] flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-card px-6 py-12 text-center shadow-sm shadow-foreground/[0.02]">
+      {icon && (
+        <div className="mb-4 flex size-12 items-center justify-center rounded-2xl bg-secondary text-secondary-foreground">
+          {icon}
+        </div>
+      )}
+
+      <h2 className="text-base font-semibold">{title}</h2>
+
+      {description && (
+        <p className="mt-2 max-w-md text-sm text-muted-foreground">
+          {description}
+        </p>
+      )}
+
+      {action && <div className="mt-5">{action}</div>}
+    </div>
+  );
+}
